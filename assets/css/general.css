@@ -17,7 +17,7 @@
 	font-size: 1.7em
 	}
 
-	
+
 rect {
 	transition: height 2s;
 	transition: width 3s;
@@ -34,13 +34,12 @@ circle{
 
 
 /* Navigation */
-#sidebar{
+#sidebar {
 	margin-top: 8vh;
-	margin-left: 2vh;
+	margin-left: 5vw;
 	z-index: 5;
-	position: fixed;
+	position: absolute;
 	/*transition: opacity .3s ease-in-out;*/
-
 }
 
 
@@ -77,7 +76,7 @@ html {
 
 
 }
- 
+
 body {
 	box-sizing: border-box;
 	/* CSS alignements */
@@ -101,7 +100,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 
 
-	
+
 }
 
 .footnote-backref {

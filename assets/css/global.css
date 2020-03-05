@@ -45,23 +45,22 @@ blockquote {
 
 article {
 	position: absolute;
-	left: 32vw;
-	/* right:40px; */
+	left: 5vw;
+	margin-right: 45vw;
 	top: 0px;
-	padding-top: 45px;
+	padding-top: 185px;
 	padding-bottom: 5px;
 }
 
 .content-article {
 	padding-right: 50px;
-	margin-left: 260px;
 	padding-bottom: 500px;
-	margin-right: 10px;
+	margin-right: 2vw;
 }
 
 .notes-images {
 	position: absolute;
-	right: 65vw;
+	right: 10vw;
 	margin-right: -230px;
 	width: 400px;
 	opacity: 0;
@@ -132,4 +131,9 @@ article {
 
 .r-notes-container {
 	top: 0;
+}
+
+.content-article >h1{
+
+	display: none;
 }
