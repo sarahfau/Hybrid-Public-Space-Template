@@ -12,13 +12,7 @@
 	  opacity: 1;
 	}
   }
-svg {
-	fill: none;
-	stroke: black;
-	/* margin: 20px; */
-	position: fixed;
-	top:1vh;
-}
+
 .content-article> H1 {
 	font-size: 1.7em
 	}
@@ -41,14 +35,24 @@ circle{
 
 /* Navigation */
 #sidebar{
-	margin-top: 24vh;
+	margin-top: 8vh;
+	margin-left: 2vh;
 	z-index: 5;
-	position: relative
-
+	position: fixed;
+	/*transition: opacity .3s ease-in-out;*/
 
 }
 
 
+
+#sidebar a:active {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+#sidebar a:hover {
+  background-color: #f0f0f0;
+}
 
 html,
 body {
@@ -68,14 +72,16 @@ html {
 
 
 @font-face {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
+	src: url("/assets/typefaces/AtlasGrotesk-Light.otf") format("opentype");
+
 
 }
-
+ 
 body {
 	box-sizing: border-box;
 	/* CSS alignements */
-	font-family: 'Open Sans';
+	font-family: 'AtlasGrotesk-Light';
 	font-size: 1.75rem;
 	/* = 18px */
 	line-height: 1.3;
@@ -102,6 +108,13 @@ body {
 	display: none;
 }
 
+.footnote {
+	border-top-style:solid;
+    border-top-width:thin;
+    border-top-color:#999999;
+    padding-top: 0.5em;
+    width: 280px !important;
+}
 
 .font-small {
 	font-size: 70%;
@@ -109,18 +122,19 @@ body {
 }
 
 .font-title {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 	font-size: 5rem;
 	line-height: 1.1;
 }
 
 h1 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 	font-size: 2.3em;
 }
 
+
 strong{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 }
 
 
@@ -134,7 +148,7 @@ a {
 	color: #000;
 	text-decoration: none;
 	border: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 }
 
 a:focus {
@@ -154,10 +168,14 @@ li {
 	margin: 0;
 }
 
+
 sup {
 	font-size: 65%;
 	line-height: 1;
 }
+
+
+
 
 
 .break {

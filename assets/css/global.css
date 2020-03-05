@@ -1,9 +1,9 @@
 em {
 
-	display: block;
+	/*display: block;*/
 	width: 81%;
 	font-weight: 300;
-	font-size: 1.2vh;
+	font-size: 1.75rem;
 }
 
 
@@ -20,15 +20,17 @@ body {
 }
 
 blockquote {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 	font-size: larger;
 }
 
 .paper-title {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 	/* Oblique title */
 	position: fixed;
-	top: 80px;
+	color: white;
+	font-size: 50%;
+	top: 0px;
 	width: 30%;
 	left: 1%;
 	z-index: 5;
@@ -75,7 +77,6 @@ article {
 
 .footnote-counter {
 	display: block;
-	font-weight: 700;
 }
 
 .footnote>a {
@@ -109,7 +110,7 @@ article {
 }
 
 #nombre {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 	position: fixed;
 	left: 0.1vw;
 	bottom: -35px;
