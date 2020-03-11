@@ -1,4 +1,23 @@
+.menu{
 
+	border-bottom: 1px solid black;
+	position: fixed;
+	background: white;
+	width: 100%;
+	z-index: 3;
+}
+.index{
+	width: 30%;
+float:right;
+	height: 100%;
+	background: white;
+	z-index: 10;
+	position: fixed;
+	border-left: 1px solid black;
+	margin-left: 70%;
+
+
+}
 /* Moving shapes */
 .fade {
 	animation-name: fade;
@@ -35,10 +54,12 @@ circle{
 
 /* Navigation */
 #sidebar {
-	margin-top: 8vh;
-	margin-left: 5vw;
+margin-left: 5vw;
 	z-index: 5;
-	position: absolute;
+
+	width: 100%;
+
+
 	/*transition: opacity .3s ease-in-out;*/
 }
 

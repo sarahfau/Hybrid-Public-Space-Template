@@ -1,68 +1,9 @@
-// Mouvements des carrés
-$(document).ready(function () {
 
-
-// var s = skrollr.init();
-
-
-var circulo = document.querySelector("#circulo");
-setInterval(function () {
-  // circulo.setAttribute("cx", getRandomInt(5, 40));
-  // circulo.setAttribute("cy", getRandomInt(5, 30));
-  circulo.setAttribute("r", getRandomInt(5, 30));
-}, 4000);
-
-var circle = document.querySelector("#circle");
-setInterval(function () {
-  circle.setAttribute("width", getRandomInt(15, 30));
-  circle.setAttribute("height", getRandomInt(25, 30));
-}, 4000);
-
-var circle2 = document.querySelector("#circle2");
-setInterval(function () {
-  circle2.setAttribute("width", getRandomInt(5, 40));
-  circle2.setAttribute("height", getRandomInt(5, 30));
-}, 4000);
-
-var circle3 = document.querySelector("#circle3");
-setInterval(function () {
-  circle3.setAttribute("width", getRandomInt(5, 40));
-  circle3.setAttribute("height", getRandomInt(5, 30));
-}, 4000);
-
-
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function requestInterval(fn, delay) {
-  var requestAnimFrame = (function () {
-      return window.requestAnimationFrame || function (callback, element) {
-        window.setTimeout(callback, 1000 / 60);
-      };
-    })(),
-    start = new Date().getTime(),
-    handle = {};
-
-  function loop() {
-    handle.value = requestAnimFrame(loop);
-    var current = new Date().getTime(),
-      delta = current - start;
-    if (delta >= delay) {
-      fn.call();
-      start = new Date().getTime();
-    }
-  }
-  handle.value = requestAnimFrame(loop);
-  return handle;
-};
-});
 // Take the Markdown File and passes it to HTML
 
 $(document).ready(function () {
 
-  
+
 
   var md = window.markdownit()
     .use(markdownitFootnote)
@@ -76,13 +17,13 @@ $(document).ready(function () {
     setTimeout(function () {
 
       var list = $('#sidebar');
-  
+
     $(".content-article h1").each(function() {
         $(this).prepend('<a name="' + $(this).text() + '"></a>');
         $(list).append('<li><a href="#' + $(this).text() + '">' +  $(this).text() + '</a></li>');
 
     });
-      
+
       putNotes(".footnote-item")
       var elements = document.getElementsByClassName("footnote-ref");
     for (var i = 0; i < elements.length; ++i) {
@@ -91,25 +32,7 @@ $(document).ready(function () {
     }, 200);
 
 
-    //lazyload
-    // $("img").each(function () {
 
-    //   $(this).attr("data-src", $(this).attr("src"));
-    //   $(this).removeAttr("src");
-    //   //lazyload
-    // $("img").addClass("lozad")
-
-
-    // lozad('.lozad', {
-    //   load: function (el) {
-    //     el.src = el.dataset.src;
-    //     el.onload = function () {
-    //       el.classList.add('fade')
-    //     }
-    //   }
-    // }).observe()
-    
-    // });
   });
 
 });
@@ -159,14 +82,14 @@ function putNotes(footerClassName) {
     noteContainer.style.opacity = 1;
 
 
-    
+
 
   }
 
   window.addEventListener("resize", function () {
     putNotes(".footnote-item");
 
-    
+
 
 
   });

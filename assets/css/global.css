@@ -1,12 +1,9 @@
 em {
-
 	/*display: block;*/
 	width: 81%;
 	font-weight: 300;
 	font-size: 1.75rem;
 }
-
-
 
 body {
 	padding-left: 10px;
@@ -45,7 +42,7 @@ blockquote {
 
 article {
 	position: absolute;
-	left: 5vw;
+	margin-left: 5vw;
 	margin-right: 45vw;
 	top: 0px;
 	padding-top: 185px;
@@ -60,7 +57,7 @@ article {
 
 .notes-images {
 	position: absolute;
-	right: 10vw;
+	right: 35vw;
 	margin-right: -230px;
 	width: 400px;
 	opacity: 0;
