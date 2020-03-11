@@ -15,8 +15,22 @@ float:right;
 	position: fixed;
 	border-left: 1px solid black;
 	margin-left: 70%;
+	overflow-y: scroll;
+	padding-left: 5px;
+	padding-right: 5px;
 
 
+}
+
+#interviews h1{
+
+	cursor: pointer;
+}
+
+
+#interviews p{
+
+	display: none;
 }
 /* Moving shapes */
 .fade {
@@ -37,20 +51,6 @@ float:right;
 	}
 
 
-rect {
-	transition: height 2s;
-	transition: width 3s;
-}
-circle{
-
-	transition: r 5s;
-	/* transition: width 0.8s; */
-}
-#circle2 {
-	margin-left: auto;
-}
-
-
 
 /* Navigation */
 #sidebar {
@@ -60,10 +60,7 @@ margin-left: 5vw;
 	width: 100%;
 
 
-	/*transition: opacity .3s ease-in-out;*/
 }
-
-
 
 #sidebar a:active {
   background-color: #f0f0f0;

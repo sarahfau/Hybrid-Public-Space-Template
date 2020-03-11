@@ -4,11 +4,13 @@
 $(document).ready(function () {
 
 
-
   var md = window.markdownit()
     .use(markdownitFootnote)
+          .use(markdownItAttrs)
     .use(markdownitContainer),
     warning;
+
+
 
 
   $.get("Thesis.md", function (data) {
