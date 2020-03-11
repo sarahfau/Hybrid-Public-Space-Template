@@ -3,32 +3,11 @@ import $ from 'jquery'
 
 $(document).ready(function () {
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-
   var md = require('markdown-it')()
       .use(require('markdown-it-container'))
       .use(require('markdown-it-footnote'))
       .use(require('markdown-it-classy'));
-
-
-
-  // var md = window.markdownit()
-  //   .use(markdownitFootnote)
-  //
-  //   .use(markdownitContainer),
-  //   warning;
-
-
-
+  
 
   $.get("Thesis.md", function (data) {
     $('#content').html(md.render(data));
@@ -37,22 +16,46 @@ $(document).ready(function () {
 
       var list = $('#sidebar');
 
-    $(".content-article h1").each(function() {
+      $(".content-article h1").each(function() {
         $(this).prepend('<a name="' + $(this).text() + '"></a>');
         $(list).append('<li><a href="#' + $(this).text() + '">' +  $(this).text() + '</a></li>');
 
-    });
+      });
 
       putNotes(".footnote-item")
       var elements = document.getElementsByClassName("footnote-ref");
-    for (var i = 0; i < elements.length; ++i) {
-      elements[i].innerHTML = elements[i].innerHTML.replace('[',' ').replace(']','');
-    }
+      for (var i = 0; i < elements.length; ++i) {
+        elements[i].innerHTML = elements[i].innerHTML.replace('[',' ').replace(']','');
+      }
     }, 200);
 
 
 
   });
+
+  var sentences = document.querySelector('#content');
+  var keywords = document.querySelector('#keywords');
+
+  keywords.addEventListener('click', function(event){
+    var target = event.target;
+    var text = sentences.textContent;
+    var regex = new RegExp('('+target.textContent+')', 'ig');
+    text = text.replace(regex, '<span class="highlight">$1</span>');
+    sentences.innerHTML = text;
+  }, false);
+
+  // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //   anchor.addEventListener('click', function (e) {
+  //     e.preventDefault();
+  //
+  //     document.querySelector(this.getAttribute('href')).scrollIntoView({
+  //       behavior: 'smooth'
+  //     });
+  //   });
+  // });
+
+
+
 
 });
 
@@ -128,6 +131,9 @@ function putNotes(footerClassName) {
       var windowWidth = $(window).width();
     }
   });
+
+
+
 
 
 

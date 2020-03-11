@@ -9,8 +9,6 @@ $(document).ready(function () {
         .use(require('markdown-it-classy'));
 
 
-
-
     $.get("interviews.md", function (data) {
         $('#interviews').html(md.render(data));
 
@@ -27,13 +25,6 @@ $(document).ready(function () {
             const index = document.getElementById("interviews");
             const interview_button = index.getElementsByTagName('h1')[0];
             interview_button.classList.add("click");
-
-
-
-// console.log(palabras);
-
-
-
 
 
             interview_button.onclick = function() {
@@ -69,3 +60,4 @@ $(document).ready(function () {
     });
 
 });
+
