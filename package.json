@@ -1,0 +1,34 @@
+{
+  "name": "memoire_sarah",
+  "version": "1.0.0",
+  "description": "A website template for passing Markdown to Html and having the footnotes as  side notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahfau/Hybrid-Public-Space-Template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahfau/Hybrid-Public-Space-Template/issues"
+  },
+  "homepage": "https://github.com/sarahfau/Hybrid-Public-Space-Template#readme",
+  "dependencies": {
+    "css": "^2.2.4",
+    "jquery": "^3.4.1",
+    "markdown-it": "^10.0.0",
+    "markdown-it-classy": "^0.2.0",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-footnote": "^3.0.2",
+    "parcel": "^1.12.4",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "sass": "^1.26.2"
+  }
+}

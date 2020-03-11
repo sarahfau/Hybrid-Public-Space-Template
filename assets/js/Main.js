@@ -1,14 +1,31 @@
-
+import $ from 'jquery'
 // Take the Markdown File and passes it to HTML
 
 $(document).ready(function () {
 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
-  var md = window.markdownit()
-    .use(markdownitFootnote)
-          .use(markdownItAttrs)
-    .use(markdownitContainer),
-    warning;
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+
+  var md = require('markdown-it')()
+      .use(require('markdown-it-container'))
+      .use(require('markdown-it-footnote'))
+      .use(require('markdown-it-classy'));
+
+
+
+  // var md = window.markdownit()
+  //   .use(markdownitFootnote)
+  //
+  //   .use(markdownitContainer),
+  //   warning;
 
 
 
@@ -60,6 +77,7 @@ function putNotes(footerClassName) {
       const numElement = document.querySelector(numElementInTextID);
       if (numElement instanceof HTMLElement) {
         const noteElementToAdd = noteContainer.appendChild(copyOfFooterElement);
+        let first;
         first = false;
         const noteNumberValueElement = document.createElement("span");
         noteNumberValueElement.innerText = num + " ";
@@ -67,8 +85,8 @@ function putNotes(footerClassName) {
         copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
         let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
 
-        console.log("body top", document.body.getBoundingClientRect().top)
-        console.log("body numElement", numElement.getBoundingClientRect().top)
+        // console.log("body top", document.body.getBoundingClientRect().top)
+        // console.log("body numElement", numElement.getBoundingClientRect().top)
 
         const marginTopNote = 20; //px unit
 
@@ -114,18 +132,3 @@ function putNotes(footerClassName) {
 
 
 
-  // $(document).ready(function() {
-  //    //   var x = $("p");
-  //    // console.log(x);
-  //
-  //   var container = document.querySelectorAll("h1");
-  //   console.log(container);
-  //
-  //   //    var x = $("h1").position.length();
-  //   // console.log(x);
-  //   //
-  //   // var y = document.querySelectorAll("h1");
-  //   // console.log(y);
-  //
-  //
-  //   });
