@@ -155,6 +155,11 @@ Practically all the online databases, regardless of their purpose, never show th
 
 I believe that the potential of the list rests in keeping its edges visible. To keep its main function of revealing how we organize and describe the world around us, the digital list must still be able to be presented as a whole. I find it regrettable that the result of the tagging process is almost never shown. If the tagging system is an indexing process, it is for now never presented as an index. It would reveal much more if they were re-organized and made visible, by treating them as lists. The tag is a representative carrier of the evolution of our relation to classification which itself reveals how we describe the world around us, and therefore how culture is constructed. It is in this direction that my project will be developed, by reinterpreting, reclassifying and re-presenting, these potential unedited lists that are the tags. By reversing this engineering, bringing the tags from the background to the visible surface of the web, it would show how this simple daily tool of listing suddenly appears as a descriptor of our daily world, without us being aware of it and its consequences.
 
+[^16]: Apple Inc, Official Apple (New) iPad Trailer, 2012
+[^17]:  Don Norman, “Why Interfaces Don’t Work”, in: Brenda Laurel (Ed.), The Art of Human-Computer Interface Design, 1990
+[^18]:  Experiments with Google: Tags. Could computers help identify artworks? [Online]
+Available at: https://experiments.withgoogle.com/tags
+
 # CONCLUSION
 
 Normally merging into the scenery, this research proposed a close focus on the structural tools used to organise our environment, by making them an object of analysis in the first place. It intentionally shifted the focus on the structure to first create a clear understanding of how the infrastructure of information is shaped and constructed through the use of these tools. If the first aim of this research was to raise awareness on how they work, it also had, on its own scale, the will to question them.

@@ -7,8 +7,8 @@
 	z-index: 3;
 }
 .index{
-	font-family: "AtlasTypewriter-Light", monospace;
-	font-size: 1.4rem;
+	font-family: AtlasTypewriter-Light;
+	font-size: 1.3rem;
 	width: 30%;
 	float:right;
 	height: 100%;
@@ -24,7 +24,15 @@
 
 }
 
+#keywords{
+	cursor: pointer;
 
+}
+
+.index h1{
+	font-size: 1.3rem;
+
+}
 #interviews h1{
 
 	cursor: pointer;
@@ -38,31 +46,29 @@
 	animation-name: fade;
 	animation-duration: 2s;
 }
-
-
 /* Moving shapes */
 .fade {
 	animation-name: fade;
 	animation-duration: 5s;
-}
-@keyframes fade {
+  }
+  @keyframes fade {
 	from {
-		opacity: 0;
+	  opacity: 0;
 	}
 	to {
-		opacity: 1;
+	  opacity: 1;
 	}
-}
+  }
 
 .content-article> H1 {
 	font-size: 1.7em
-}
+	}
 
 
 
 /* Navigation */
 #sidebar {
-	margin-left: 5vw;
+margin-left: 5vw;
 	z-index: 5;
 
 	width: 100%;
@@ -71,13 +77,12 @@
 }
 
 #sidebar a:active {
-	background-color: #f0f0f0;
-	border-color: #f0f0f0;
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
 }
 
-
 #sidebar a:hover {
-	background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 html,
@@ -106,7 +111,6 @@ html {
 @font-face {
 	font-family: 'AtlasTypewriter-Light';
 	src: url("/assets/typefaces/AtlasTypewriter-Light.otf") format("opentype");
-
 }
 
 body {
@@ -132,8 +136,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 
 
-}
 
+}
 
 .footnote-backref {
 	display: none;
@@ -141,10 +145,10 @@ body {
 
 .footnote {
 	border-top-style:solid;
-	border-top-width:thin;
-	border-top-color:#999999;
-	padding-top: 0.5em;
-	width: 280px !important;
+    border-top-width:thin;
+    border-top-color:#999999;
+    padding-top: 0.5em;
+    width: 280px !important;
 }
 
 .font-small {
@@ -170,7 +174,7 @@ strong{
 
 
 img
-{
+ {
 	width: 81%;
 	height: auto;
 }
@@ -212,8 +216,6 @@ sup {
 .break {
 	display: block;
 }
-
-
 
 
 
