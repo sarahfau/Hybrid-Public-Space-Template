@@ -15,7 +15,7 @@ $(document).ready(function () {
 
             var list = $('#list-interviews');
 
-            $("#interviews h1").each(function () {
+            $("#interviews-list h1").each(function () {
                 $(this).prepend('<a name="' + $(this).text() + '"></a>');
                 $(list).append('<a class="open-interview" href="#' + $(this).text() + '">' + $(this).text() + '</a>');
 
@@ -31,11 +31,11 @@ $(document).ready(function () {
                 const ar = index.getElementsByTagName('p')
                 let i;
                 for (i = 0; i < ar.length; ++i) {
-                    if (ar[i].style.display != "none") //the element is visible
+                    if (ar[i].style.display != "none")
                     {
                         ar[i].style.display = "none";
                     } else {
-                        ar[i].style.display = "block"; //If you need to make it block explicitly, otherwise ""
+                        ar[i].style.display = "block";
                     }
                 }
 

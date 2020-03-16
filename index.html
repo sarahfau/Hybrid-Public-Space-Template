@@ -42,19 +42,38 @@
 <!--  <div class="pourcentage font-small"><span class='compteur_pourcentage'>0</span> %</div>-->
 <div class="r-notes-container notes-images"></div>
 
-<div class="index">
-    <div id="list-interviews"></div>
-    <div class="index-words">
-        <div id="keywords">
+<div class="menu-right">
+
+
+<ul>
+
+    <li><a class="interview-menu" href="#">INTERVIEWS</a></li>
+    <li><a class="index-menu" href="#">INDEX</a></li>
+    <li><a class="colophon-menu" href="#">COLOPHON</a></li>
+
+</ul>
+
+
+    <div class="interviews collapsible" style="display: block;">
+
+    <div id="list-interviews "></div>
+
+
+    <div id="interviews" class="collapsible">
+
+
+    </div>
+
+    </div>
+
+    <div class="index-words collapsible" style="display: none;">
+
+        <div id="keywords"  class="collapsible" >
             <span>Index</span>
             <span>Example</span>.
         </div>
 
-
-
-    </div>
-    <div class="colophon"></div>
-    <div id="interviews">
+        <div class="colophon collapsible" style="display: none;"></div>
 
 
     </div>
@@ -64,4 +83,5 @@
 
 <script src="assets/js/Main.js"></script>
 <script src="assets/js/interviews.js"></script>
+<script src="assets/js/helper.js"></script>
 </body>

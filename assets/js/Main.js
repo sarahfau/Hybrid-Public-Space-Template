@@ -3,6 +3,9 @@ import $ from 'jquery'
 
 $(document).ready(function () {
 
+
+
+
   var md = require('markdown-it')()
       .use(require('markdown-it-container'))
       .use(require('markdown-it-footnote'))
@@ -77,12 +80,7 @@ function putNotes(footerClassName) {
         noteNumberValueElement.className = "footnote-counter";
         copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
         let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-
-        // console.log("body top", document.body.getBoundingClientRect().top)
-        // console.log("body numElement", numElement.getBoundingClientRect().top)
-
         const marginTopNote = 20; //px unit
-
         if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
           topPosition = prevFootnoteBottomPosition + marginTopNote;
         }
