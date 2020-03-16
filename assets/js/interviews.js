@@ -2,6 +2,17 @@ import $ from 'jquery'
 
 $(document).ready(function () {
 
+    // var prevScrollpos = window.pageYOffset;
+    //     window.onscroll = function() {
+    //         var currentScrollPos = window.pageYOffset;
+    //         if (prevScrollpos > currentScrollPos) {
+    //             document.querySelector(".title").style.top = "0";
+    //         } else {
+    //             document.querySelector(".title").style.top = "-50px";
+    //         }
+    //         prevScrollpos = currentScrollPos;
+    //     }
+
     var md = require('markdown-it')()
         .use(require('markdown-it-container'))
         .use(require('markdown-it-footnote'))
@@ -42,7 +53,7 @@ $(document).ready(function () {
             };
 
 
-        }, 200);
+        }, 500);
 
 
     });
