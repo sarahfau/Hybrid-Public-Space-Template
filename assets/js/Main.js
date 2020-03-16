@@ -7,7 +7,7 @@ $(document).ready(function () {
       .use(require('markdown-it-container'))
       .use(require('markdown-it-footnote'))
       .use(require('markdown-it-classy'));
-  
+
 
   $.get("Thesis.md", function (data) {
     $('#content').html(md.render(data));
@@ -37,23 +37,13 @@ $(document).ready(function () {
   var keywords = document.querySelector('#keywords');
 
   keywords.addEventListener('click', function(event){
+
     var target = event.target;
-    var text = sentences.textContent;
-    var regex = new RegExp('('+target.textContent+')', 'ig');
+    var text = sentences.innerHTML;
+    var regex = new RegExp('('+target.innerHTML+')', 'ig');
     text = text.replace(regex, '<span class="highlight">$1</span>');
     sentences.innerHTML = text;
   }, false);
-
-  // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  //   anchor.addEventListener('click', function (e) {
-  //     e.preventDefault();
-  //
-  //     document.querySelector(this.getAttribute('href')).scrollIntoView({
-  //       behavior: 'smooth'
-  //     });
-  //   });
-  // });
-
 
 
 
