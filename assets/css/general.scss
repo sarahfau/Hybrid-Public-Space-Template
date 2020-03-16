@@ -37,7 +37,7 @@
 
 }
 
-#keywords span {
+#keywords a {
 	flex-grow: 1;
 	width: 33%;
 	padding: 10px;
@@ -61,7 +61,7 @@
 	animation-name: fade;
 	animation-duration: 2s;
 }
-/* Moving shapes */
+
 .fade {
 	animation-name: fade;
 	animation-duration: 5s;
@@ -90,6 +90,10 @@ margin-left: 5vw;
 
 
 
+}
+
+.active {
+	text-decoration: underline;
 }
 
 #sidebar a:active {

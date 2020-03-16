@@ -1,13 +1,21 @@
+
 window.addEventListener("DOMContentLoaded", function (e) {
 
     var keywords = document.querySelector('#keywords');
 
     keywords.addEventListener('click', function (event) {
-        var myHilitor = new Hilitor("#content");
-        var target = event.target;
+
+//TODO counter https://www.the-art-of-web.com/javascript/search-highlight-demo/
+
+        var myHilitor = new Hilitor("content");
+        let target = event.target;
+        $(target).toggleClass('active').siblings().removeClass('active');
+        // target.classList.add('active');
         let keywordtoSearch = target.innerHTML;
         console.log(keywordtoSearch);
         myHilitor.apply(keywordtoSearch);
+
+
 
     }, false);
 
