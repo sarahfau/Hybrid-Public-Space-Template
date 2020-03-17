@@ -72,13 +72,13 @@
 	background-color: #f0f0f0;
 }
 
-#interviews h1{
+#div1 h1{
 
 	cursor: pointer;
 	user-select: none;
 }
 
-#interviews h1:active{
+#div1 h1:active{
 
 	cursor: pointer;
 	user-select: none;
@@ -88,7 +88,7 @@
 
 
 
-#interviews p{
+#div1 p{
 
 	display: none;
 	animation-name: fade;
@@ -96,7 +96,7 @@
 	line-height: 1.5;
 }
 
-#interviews em{
+#div1 em{
 	font-size: 1.2rem;
 	line-height: 1.5;
 
