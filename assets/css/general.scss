@@ -1,3 +1,8 @@
+.menu-right-sub{
+
+	margin-bottom: 20px;
+}
+
 .menu{
 
 	border-bottom: 1px solid black;
@@ -26,6 +31,7 @@
 	padding-right: 25px;
 	padding-top: 15px;
 	margin-top: 43px;
+	line-height: 20px;
 
 
 }
@@ -161,8 +167,6 @@ body {
 	/* Make rendering look more consistent across platforms */
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale;
-
-
 
 }
 

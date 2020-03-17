@@ -5,7 +5,7 @@
 	.paper-title {
 	    top:60px;
 			width:26%;
-			
+
 		}
 
 
@@ -42,6 +42,8 @@
 /* iPad portrait */
 /* http://stephen.io/mediaqueries */
 @media screen and (max-width:768px) {
+
+
 
 	.notes-images {
 		position: relative;
@@ -90,6 +92,7 @@
 		margin-left:0;
 		padding-right:2.5vw;
 		display: contents;
+		width: 100%;
 		}
 
 	.font-title {
@@ -141,18 +144,19 @@
 @media screen and (max-width:1024px) {
 
 	body {
-		padding-left: 60px;
+		padding-left: 45px;
 		font-size: 1.6rem;
 			line-height: 1.2;
+		scroll-padding-top: 400px;
 		}
 
 	.font-title {
-		
+
 		height: 210px;
 		}
 
 		.font-title H1 {
-		
+
 			font-size: 8rem;
 			margin-bottom: 70%;
 
@@ -168,10 +172,16 @@
 		}
 
 		#sidebar{
-			margin-top: 24vh;
-		
-		
+			margin-top: 2vh;
+			margin-left: 0;
+
+
 		}
+
+	.title a{
+
+		margin-left: 0;
+	}
 
 
 
@@ -183,6 +193,7 @@
 		margin-left:0;
 		margin-right:0;
 		padding-top:0;
+		width: 100%;
 		}
 
 
@@ -191,6 +202,7 @@
 	.content-article {
 	    margin-left:0vw;
 	    padding-bottom:10px;
+		padding-top: 180px;
 		}
 
 	.numerotation {
@@ -210,7 +222,7 @@
     opacity: 0;
 		}
 
-		
+
 	.numero {
 		text-indent:0;
 		text-align:right;
@@ -220,8 +232,8 @@
 
 		font-size: 1.1em;
 		}
-	
-	
+
+
 
 	.r-notes-container {
 		position: static;
@@ -231,7 +243,7 @@
 		top: 0 !important;
 		position: relative !important;
 		}
-		
+
 		.footnote {
 			float: right;
 			width: 100%;
@@ -242,10 +254,10 @@
 
 	.font-title {
 		font-size: 8rem;
-		
+
 	}
 
 
-	
+
 
 }}

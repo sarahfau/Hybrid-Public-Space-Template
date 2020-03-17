@@ -110,7 +110,7 @@ article {
 
 
 .footnote-counter {
-	display: block;
+	//display: block;
 }
 
 .footnote>a{
@@ -155,6 +155,11 @@ article {
 
 .r-notes-container {
 	top: 0;
+	p{
+
+
+		display: inline;
+	}
 }
 
 .content-article >h1{
