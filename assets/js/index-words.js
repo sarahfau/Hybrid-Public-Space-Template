@@ -5,6 +5,11 @@ window.addEventListener("DOMContentLoaded", function (e) {
 
     keywords.addEventListener('click', function (event) {
 
+
+
+//TODO add sorting alphabetically https://isotope.metafizzy.co/sorting.html
+
+
 //TODO counter https://www.the-art-of-web.com/javascript/search-highlight-demo/
 
         var myHilitor = new Hilitor("content");

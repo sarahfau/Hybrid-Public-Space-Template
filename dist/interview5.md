@@ -1,4 +1,4 @@
-# Interview: Resisting alive systems with Olia Lialina
+# 05 Interview: Resisting alive systems with Olia Lialina
 
 SF&emsp;&emsp;*Your project One Terabyte of Kilobyte Age is centered around the preservation and restoration of websites from the web hosting service GeoCities.com, which was shut down in 2009. I can imagine that this meticulous work requires a methodical and rigorous approach leading to elaborate an efficient system for sorting and classifying the content found. How does your work relate to the use of classification and the tagging process?*
 
