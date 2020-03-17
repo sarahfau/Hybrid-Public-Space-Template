@@ -66,7 +66,7 @@
 }
 
 .menu-right h1:active{
-text-decoration: underline;
+	background-color: #f0f0f0;
 }
 
 #interviews h1{
@@ -74,6 +74,15 @@ text-decoration: underline;
 	cursor: pointer;
 	user-select: none;
 }
+
+#interviews h1:active{
+
+	cursor: pointer;
+	user-select: none;
+	text-decoration: underline;
+
+}
+
 
 
 #interviews p{
@@ -127,7 +136,7 @@ margin-left: 5vw;
 }
 
 #sidebar a:active {
-  background-color: #f0f0f0;
+	background-color: #f0f0f0;
   border-color: #f0f0f0;
 }
 
@@ -135,7 +144,10 @@ margin-left: 5vw;
   background-color: #f0f0f0;
 }
 
+#sidebar a:focus {
+	background-color: #f0f0f0;
 
+}
 html,
 body {
 	width: 100%;
