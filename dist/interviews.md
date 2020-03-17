@@ -1,4 +1,5 @@
-# Living material vs. semantic bits, with Pierre Mohamed-Petit from NOOR Images
+# 01 Living material vs. semantic bits
+&emsp;&emsp;with Pierre Mohamed-Petit from NOOR Images
 
 SF&emsp;&emsp;*Specifically in the context of photojournalism, the tagging process acts as the first interpretive layer on a photograph. Many different interpretations can be attributed to one single photograph. When you tag an image, are all the tags related to a certain reading of the image, or are you defining tags that allow a reading of the image in all kinds of different ways?*
 

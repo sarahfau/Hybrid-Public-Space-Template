@@ -55,8 +55,7 @@ Once defined, these items need to be categorised. By definition, an item is a â€
 
 Thus, when we look at *List of lists of lists*[^6] from Wikipedia, the submitted innumerable data gives the impression that the whole world has been cropped into that frame. Everything seems to be inside, from the list of minor planets to the list of ancient kings. Everything is so well orchestrated, with countless boxes to classify and order data in, without leaving anything on the side that the completeness of this huge list seems indisputable. Although it is practically certain that not everything is truly inside, the illusion that it is would be sufficient to attribute to the list a primacy in any effort to categorise a content.
 
-![image_caption](images/1.png)
-![image_caption](images/1a.png)  
+![image_caption](images/1.png) ![image_caption](images/1a.png)  
 List of lists of lists from Wikipedia. 2003.
 
 It seems essential to clarify the understanding of what is meant by the term list. Think of the list as a mold: a mold is commonly defined as a hollow form shaping a substance[^7]. This general definition fully echoes with my own understanding of the list. The substance, which can be understood as any element from an original content, will take shape through the structure of the list, emerging as semantic chosen bits **[Interview 01]** ***test***
@@ -66,9 +65,8 @@ In that sense, any listing process implies a selection. Museums were one of the 
 Today the most used tool to unlock online lists is the tag. Because the term tagging stands for a variety of activities, it is important to mention that this research will strictly confine itself to the investigation of descriptive tagging, rather applied to a text or to a visual, leading to the emergence of micro digital lists. Thus, the tagging process will only refer to the elaboration of a series of keywords to classify, order and categorise, making a web-object findable in a database. As the ultimate tool of online referencing, the tag acts as a point to refer to when facing within increasingly complex databases. By assigning a tag to a web object, the resulting word becomes an identical keyword. By doing so, it immediately ensures online visibility.
 
 The net artist Olia Lialina[^8], through her undertaking of referencing obsolete sites from the old Geocities.com, attributes to each item a tag, and therefore an identity. This personal approach brings out the importance of referencing items in the context of the web: she makes these forgotten web pages visible and present on the web again. In other words, tagging guarantees them to survive online by inscribing them in the current online feed, making them traceable again.
-![image_caption](images/2-4.png)
-![image_caption](images/2-3.png)  
-Screenshots from the interface of the ongoing project One Terabyte of Kilobyte Age by Olia Lialina and Dragan Espenschied.
+![image_caption](images/2-4.png)  
+Screenshot from the interface of the ongoing project One Terabyte of Kilobyte Age by Olia Lialina and Dragan Espenschied.
 
 
 This selection process immediately excludes other interpretations and readings of the original content and determines one or more selected ways of looking at it, depending on the strategies[^9] determined by the platform in which the labeling process operates.
