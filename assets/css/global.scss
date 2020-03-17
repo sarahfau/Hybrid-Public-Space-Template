@@ -48,10 +48,11 @@ em {
 }
 
 
-body {
+html,body {
 	padding-left: 10px;
 	padding-right: 10px;
-	position: relative;
+	//position: relative;
+	scroll-padding-top: 200px;
 }
 
 .fade {
@@ -70,7 +71,7 @@ blockquote {
 	position: fixed;
 	color: white;
 	font-size: 50%;
-	top: 0px;
+	top: 0;
 	width: 30%;
 	left: 1%;
 	z-index: 5;
@@ -86,7 +87,7 @@ blockquote {
 article {
 	position: absolute;
 	margin-left: 5vw;
-	top: 0px;
+	top: 0;
 	padding-top: 185px;
 	padding-bottom: 5px;
 	width: 50%;
@@ -148,19 +149,6 @@ article {
 	position: fixed;
 	left: 0.1vw;
 	bottom: -35px;
-
-
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-
-	-webkit-transform-origin: 0% 0%;
-	-moz-transform-origin: 0% 0%;
-	-ms-transform-origin: 0% 0%;
-	-o-transform-origin: 0% 0%;
-	transform-origin: 0% 0%;
 
 }
 

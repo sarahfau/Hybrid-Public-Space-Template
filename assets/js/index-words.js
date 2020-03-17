@@ -10,10 +10,11 @@ window.addEventListener("DOMContentLoaded", function (e) {
         var myHilitor = new Hilitor("content");
         let target = event.target;
         $(target).toggleClass('active').siblings().removeClass('active');
-        // target.classList.add('active');
         let keywordtoSearch = target.innerHTML;
+        matches = myHilitor.apply(keywordtoSearch);
         console.log(keywordtoSearch);
         myHilitor.apply(keywordtoSearch);
+        console.log(matches);
 
 
 
@@ -33,7 +34,7 @@ function Hilitor(id, tag)
     var targetNode = document.getElementById(id) || document.body;
     var hiliteTag = tag || "MARK";
     var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
-    var colors = ["#ff6", "#a0ffff", "#9f9", "#f99", "#f6f"];
+    var colors = ["#ff6"];
     var wordColor = [];
     var colorIdx = 0;
     var matchRegExp = "";

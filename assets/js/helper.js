@@ -12,6 +12,8 @@ interviewButton.onclick = function () {
     colophonDiv.style.display = "none";
     interviewDiv.style.display = "block";
 
+    
+
 
 };
 

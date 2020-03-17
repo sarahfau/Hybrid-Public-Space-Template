@@ -11,7 +11,7 @@
 	line-height: 20px;
 }
 .menu-right{
-	font-family: AtlasTypewriter-Light;
+	font-family: AtlasTypewriter-Light, monospace;
 	font-size: 1.3rem;
 	width: 32%;
 	float:right;
@@ -40,13 +40,17 @@
 #keywords a {
 	flex-grow: 1;
 	width: 33%;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-family: AtlasTypewriter-Light, monospace;
 
 }
 
 .menu-right h1{
 	font-size: 1.3rem;
-	font-family: "AtlasGrotesk-Light";
+	font-family: AtlasTypewriter-Light, monospace;
+	font-weight: normal;
 }
 #interviews h1{
 
@@ -76,8 +80,9 @@
   }
 
 .content-article> H1 {
-	font-size: 1.7em;
+	font-size: 1em;
 	visibility: hidden;
+	//margin: 0px;
 	}
 
 
@@ -125,18 +130,20 @@ html {
 @font-face {
 	font-family: 'AtlasGrotesk-Light';
 	src: url("/assets/typefaces/AtlasGrotesk-Light.otf") format("opentype");
+	font-weight: normal;
 
 }
 
 @font-face {
 	font-family: 'AtlasTypewriter-Light';
 	src: url("/assets/typefaces/AtlasTypewriter-Light.otf") format("opentype");
+	font-weight: normal;
 }
 
 body {
 	box-sizing: border-box;
 	/* CSS alignements */
-	font-family: 'AtlasGrotesk-Light';
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 	font-size: 1.7rem;
 	/* = 18px */
 	line-height: 1.3;
