@@ -69,14 +69,16 @@
 
 }
 
-.menu-right h1:active{
-	background-color: #f0f0f0;
+.menu-right .active{
+	//background-color: #f0f0f0;
+	text-decoration: underline;
 }
 
 #div1 h1{
 
 	cursor: pointer;
 	user-select: none;
+
 
 }
 
@@ -142,13 +144,13 @@ margin-left: 5vw;
 
 }
 
-.active {
-	text-decoration: underline;
-}
+//.active {
+//
+//}
 
-#sidebar a:active {
+#sidebar .active {
 	background-color: #f0f0f0;
-  border-color: #f0f0f0;
+
 }
 
 #sidebar a:hover {

@@ -12,7 +12,7 @@ interviewButton.onclick = function () {
     colophonDiv.style.display = "none";
     interviewDiv.style.display = "block";
 
-    
+
 
 
 };
@@ -32,5 +32,15 @@ colophonButton.onclick = function () {
 
 
 };
+
+
+setTimeout(function () {
+    $("#sidebar a").click(function () {
+        $("#sidebar a").removeClass("active");
+        $(this).toggleClass("active");
+
+        // $(this).toggleClass("underline");
+    });
+}, 2000);
 
 
