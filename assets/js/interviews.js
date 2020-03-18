@@ -28,7 +28,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".abrir h1").click(function () {
             $(this).siblings().toggle('5000');
-            // $(this).toggleClass("inline");
+            $(this).toggleClass("active");
             // $(this).toggleClass("underline");
         });
     }, 2000);
