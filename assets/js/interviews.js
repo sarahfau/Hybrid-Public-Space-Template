@@ -18,7 +18,10 @@ $(document).ready(function () {
                 newDiv.innerHTML = newContent;
                 document.getElementById('div1').appendChild(newDiv);
                 var h1s = newDiv.getElementsByTagName('h1')[0];
-
+                $(".abrir").click(function () {
+                    $(".abrir").removeClass("active");
+                    $(this).addClass("active");
+                } );
             });
         }
     }

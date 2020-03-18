@@ -2,12 +2,14 @@
 
 .title{
 	width: 100%;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid grey;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	position: fixed;
 	z-index: 12;
 	background: white;
+	font-size: 1.4rem;
+	text-transform: uppercase;
 
 a{
     margin-left: 5vw;
@@ -74,7 +76,7 @@ article {
 
 .content-article {
 	font-size: 1.7rem;
-	padding-bottom: 500px;
+	padding-bottom: 100px;
 	margin-right: 140px;
 	scroll-behavior: smooth;
 }
