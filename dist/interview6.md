@@ -1,4 +1,4 @@
-# 06 Interview: Indexes 2.0: physical molds vs. digital templates with Pierke I.S. Bosschieter, Caroline Diepeveen
+# 06 Indexes 2.0: physical molds vs. digital templates with Pierke I.S. Bosschieter, Caroline Diepeveen
 
 SF&emsp;&emsp;*In 2011, you received a price for your collaboration on the index for The Encyclopedia of Jews in the Islamic World by Norman Stillman, which covers the jews of muslim lands particularly in the late medieval, early modern and modern periods. I imagine that working with such a complex content required defining multiple parameters to elaborate a proper index. It raised diverse issues but in particular the question of how an index is presented once created and established.*
 
