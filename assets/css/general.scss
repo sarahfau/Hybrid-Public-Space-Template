@@ -60,14 +60,7 @@
 
 }
 
-.menu-right h1{
-	font-size: 1.2rem;
-	font-family: AtlasTypewriter-Light, monospace;
-	font-weight: normal;
-	margin-bottom: 0;
-	line-height: 1.3;
 
-}
 .menu-right a{
 	font-size: 1.4rem;
 	font-family: AtlasTypewriter-Light, monospace;
@@ -82,23 +75,38 @@
 
 
 #div1 h1{
-
+	font-size: 1.2rem;
 	cursor: pointer;
 	user-select: none;
+	font-family: AtlasTypewriter-Light, monospace;
+	font-weight: normal;
+	margin-bottom: 0;
+	line-height: 1.3;
 
 }
+
+
+.active {
+	a{
+	cursor: pointer;
+	user-select: none;
+		background-color: #f0f0f0;
+	}
+
+	li{
+		background-color: #f0f0f0;
+
+	}
+	h1{
+		text-decoration: underline;
+	}
+}
+
 
 #div1 h1:first-child{
 
 	margin-bottom: 15px;
 
-}
-
-#div1 h1:active{
-
-	cursor: pointer;
-	user-select: none;
-	text-decoration: underline;
 
 }
 
@@ -150,9 +158,7 @@ margin-left: 5vw;
 
 }
 
-.active {
-	text-decoration: underline;
-}
+
 
 #sidebar a:active {
 	background-color: #f0f0f0;
