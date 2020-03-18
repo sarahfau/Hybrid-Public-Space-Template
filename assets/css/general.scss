@@ -5,31 +5,31 @@
 
 .menu{
 
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid grey;
 	position: fixed;
 	background: white;
 	width: 100%;
 	z-index: 3;
-	padding-top: 60px;
+	padding-top: 55px;
 	padding-bottom: 15px;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	line-height: 20px;
 }
 .menu-right{
 	font-family: AtlasTypewriter-Light, monospace;
 	font-size: 1.2rem;
-	width: 32%;
+	width: 30%;
 	float:right;
 	height: 100%;
 	background: white;
 	z-index: 10;
 	position: fixed;
-	border-left: 1px solid black;
-	margin-left: 68%;
+	border-left: 1px solid grey;
+	margin-left: 70%;
 	overflow-y: scroll;
 	padding-left: 25px;
 	padding-right: 25px;
-	padding-top: 58px;
+	padding-top: 55px;
 	//margin-top: 43px;
 	line-height: 20px;
 
@@ -68,10 +68,18 @@
 	line-height: 1.3;
 
 }
+.menu-right a{
+	font-size: 1.4rem;
+	font-family: AtlasTypewriter-Light, monospace;
+	line-height: 20px;
 
-.menu-right h1:active{
-	background-color: #f0f0f0;
 }
+
+.menu-right a:active{
+	background-color: #f0f0f0;
+
+}
+
 
 #div1 h1{
 
