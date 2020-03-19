@@ -9,7 +9,6 @@
 	padding-right: 2px;
 }
 
-
 .menu{
 
 	border-bottom: 1px solid grey;
@@ -255,7 +254,13 @@ h1 {
 
 
 strong{
-	font-family: 'AtlasGrotesk-Light', sans-serif;
+	font-family: AtlasTypewriter-Light, monospace;
+	font-size: 1.2rem;
+	text-decoration: underline;
+	font-weight: normal;
+	padding-right: 5px;
+	padding-left: 5px;
+
 }
 
 
