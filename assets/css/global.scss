@@ -135,6 +135,13 @@ article {
 
 
 .r-notes-container {
+
+	a{
+
+		text-decoration: underline;
+
+	}
+
 	top: 0;
 	p{
 
@@ -146,5 +153,17 @@ article {
 .content-article >h1{
 
 	/*display: none;*/
+}
+
+.open-interview-1{
+
+	cursor: pointer;
+
+}
+
+.open-interview-2{
+
+	cursor: pointer;
+
 }
 
