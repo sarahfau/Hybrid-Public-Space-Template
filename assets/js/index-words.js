@@ -1,17 +1,8 @@
-
 window.addEventListener("DOMContentLoaded", function (e) {
-
-    var keywords = document.querySelector('#keywords');
-
-    keywords.addEventListener('click', function (event) {
-
-
-
-//TODO add sorting alphabetically https://isotope.metafizzy.co/sorting.html
-
-
-//TODO counter https://www.the-art-of-web.com/javascript/search-highlight-demo/
-
+        var keywords = document.querySelector('#keywords');
+        keywords.addEventListener('click', function (event) {
+        //TODO add sorting alphabetically https://isotope.metafizzy.co/sorting.html
+        //TODO counter https://www.the-art-of-web.com/javascript/search-highlight-demo/
         var myHilitor = new Hilitor("content");
         let target = event.target;
         $(target).toggleClass('active').siblings().removeClass('active');
@@ -20,20 +11,13 @@ window.addEventListener("DOMContentLoaded", function (e) {
         console.log(keywordtoSearch);
         myHilitor.apply(keywordtoSearch);
         console.log(matches);
-
-
-
     }, false);
-
 
 }, false);
 
-
 // Original JavaScript code by Chirp Internet: www.chirp.com.au
 // Please acknowledge use of this code by including this header.
-
-function Hilitor(id, tag)
-{
+function Hilitor(id, tag) {
 
     // private variables
     var targetNode = document.getElementById(id) || document.body;
@@ -52,20 +36,18 @@ function Hilitor(id, tag)
     // characters used to break up the input string into words
     var breakRegExp = new RegExp('[^\\w\'-]+', "g");
 
-    this.setEndRegExp = function(regex) {
+    this.setEndRegExp = function (regex) {
         endRegExp = regex;
         return endRegExp;
     };
 
-    this.setBreakRegExp = function(regex) {
+    this.setBreakRegExp = function (regex) {
         breakRegExp = regex;
         return breakRegExp;
     };
 
-    this.setMatchType = function(type)
-    {
-        switch(type)
-        {
+    this.setMatchType = function (type) {
+        switch (type) {
             case "left":
                 this.openLeft = false;
                 this.openRight = true;
@@ -86,17 +68,16 @@ function Hilitor(id, tag)
         }
     };
 
-    this.setRegex = function(input)
-    {
+    this.setRegex = function (input) {
         input = input.replace(endRegExp, "");
         input = input.replace(breakRegExp, "|");
         input = input.replace(/^\||\|$/g, "");
-        if(input) {
+        if (input) {
             var re = "(" + input + ")";
-            if(!this.openLeft) {
+            if (!this.openLeft) {
                 re = "\\b" + re;
             }
-            if(!this.openRight) {
+            if (!this.openRight) {
                 re = re + "\\b";
             }
             matchRegExp = new RegExp(re, "i");
@@ -105,8 +86,7 @@ function Hilitor(id, tag)
         return false;
     };
 
-    this.getRegex = function()
-    {
+    this.getRegex = function () {
         var retval = matchRegExp.toString();
         retval = retval.replace(/(^\/(\\b)?|\(|\)|(\\b)?\/i$)/g, "");
         retval = retval.replace(/\|/g, " ");
@@ -114,19 +94,18 @@ function Hilitor(id, tag)
     };
 
     // recursively apply word highlighting
-    this.hiliteWords = function(node)
-    {
-        if(node === undefined || !node) return;
-        if(!matchRegExp) return;
-        if(skipTags.test(node.nodeName)) return;
+    this.hiliteWords = function (node) {
+        if (node === undefined || !node) return;
+        if (!matchRegExp) return;
+        if (skipTags.test(node.nodeName)) return;
 
-        if(node.hasChildNodes()) {
-            for(var i=0; i < node.childNodes.length; i++)
+        if (node.hasChildNodes()) {
+            for (var i = 0; i < node.childNodes.length; i++)
                 this.hiliteWords(node.childNodes[i]);
         }
-        if(node.nodeType == 3) { // NODE_TEXT
-            if((nv = node.nodeValue) && (regs = matchRegExp.exec(nv))) {
-                if(!wordColor[regs[0].toLowerCase()]) {
+        if (node.nodeType == 3) { // NODE_TEXT
+            if ((nv = node.nodeValue) && (regs = matchRegExp.exec(nv))) {
+                if (!wordColor[regs[0].toLowerCase()]) {
                     wordColor[regs[0].toLowerCase()] = colors[colorIdx++ % colors.length];
                 }
 
@@ -139,14 +118,14 @@ function Hilitor(id, tag)
                 after.nodeValue = after.nodeValue.substring(regs[0].length);
                 node.parentNode.insertBefore(match, after);
             }
-        };
+        }
+        ;
     };
 
     // remove highlighting
-    this.remove = function()
-    {
+    this.remove = function () {
         var arr = document.getElementsByTagName(hiliteTag);
-        while(arr.length && (el = arr[0])) {
+        while (arr.length && (el = arr[0])) {
             var parent = el.parentNode;
             parent.replaceChild(el.firstChild, el);
             parent.normalize();
@@ -154,13 +133,12 @@ function Hilitor(id, tag)
     };
 
     // start highlighting at target node
-    this.apply = function(input)
-    {
+    this.apply = function (input) {
         this.remove();
-        if(input === undefined || !(input = input.replace(/(^\s+|\s+$)/g, ""))) {
+        if (input === undefined || !(input = input.replace(/(^\s+|\s+$)/g, ""))) {
             return;
         }
-        if(this.setRegex(input)) {
+        if (this.setRegex(input)) {
             this.hiliteWords(targetNode);
         }
         return matchRegExp;

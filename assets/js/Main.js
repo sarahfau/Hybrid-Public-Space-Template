@@ -4,35 +4,33 @@ import $ from 'jquery'
 $(document).ready(function () {
 
 
+    var md = require('markdown-it')()
+        .use(require('markdown-it-container'))
+        .use(require('markdown-it-footnote'))
+        .use(require('markdown-it-classy'));
 
 
-  var md = require('markdown-it')()
-      .use(require('markdown-it-container'))
-      .use(require('markdown-it-footnote'))
-      .use(require('markdown-it-classy'));
+    $.get("Thesis.md", function (data) {
+        $('#content').html(md.render(data));
 
+        setTimeout(function () {
 
-  $.get("Thesis.md", function (data) {
-    $('#content').html(md.render(data));
+            var list = $('#sidebar');
 
-    setTimeout(function () {
+            $(".content-article h1").each(function () {
+                $(this).prepend('<a name="' + $(this).text() + '"></a>');
+                $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
 
-      var list = $('#sidebar');
+            });
 
-      $(".content-article h1").each(function() {
-        $(this).prepend('<a name="' + $(this).text() + '"></a>');
-        $(list).append('<li><a href="#' + $(this).text() + '">' +  $(this).text() + '</a></li>');
+            putNotes(".footnote-item")
+            var elements = document.getElementsByClassName("footnote-ref");
+            for (var i = 0; i < elements.length; ++i) {
+                elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
+            }
+        }, 200);
 
-      });
-
-      putNotes(".footnote-item")
-      var elements = document.getElementsByClassName("footnote-ref");
-      for (var i = 0; i < elements.length; ++i) {
-        elements[i].innerHTML = elements[i].innerHTML.replace('[',' ').replace(']','');
-      }
-    }, 200);
-
-  });
+    });
 
 });
 
@@ -48,61 +46,57 @@ function putNotes(footerClassName) {
 
     let prevFootnoteBottomPosition = 0;
     for (const footerElement of footerNotesElements) {
-      footerElement.style.display = "none";
-      const copyOfFooterElement = footerElement.cloneNode(true);
-      copyOfFooterElement.style.display = "block";
-      const footerID = copyOfFooterElement.id;
-      const num = footerID.substring(2);
-      const numElementInTextID = "#fnref" + num;
-      const numElement = document.querySelector(numElementInTextID);
-      if (numElement instanceof HTMLElement) {
-        const noteElementToAdd = noteContainer.appendChild(copyOfFooterElement);
-        let first;
-        first = false;
-        const noteNumberValueElement = document.createElement("span");
-        noteNumberValueElement.innerText = num + " ";
-        noteNumberValueElement.className = "footnote-counter";
-        copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
-        let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-        const marginTopNote = 20; //px unit
-        if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
-          topPosition = prevFootnoteBottomPosition + marginTopNote;
+        footerElement.style.display = "none";
+        const copyOfFooterElement = footerElement.cloneNode(true);
+        copyOfFooterElement.style.display = "block";
+        const footerID = copyOfFooterElement.id;
+        const num = footerID.substring(2);
+        const numElementInTextID = "#fnref" + num;
+        const numElement = document.querySelector(numElementInTextID);
+        if (numElement instanceof HTMLElement) {
+            const noteElementToAdd = noteContainer.appendChild(copyOfFooterElement);
+            let first;
+            first = false;
+            const noteNumberValueElement = document.createElement("span");
+            noteNumberValueElement.innerText = num + " ";
+            noteNumberValueElement.className = "footnote-counter";
+            copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
+            let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+            const marginTopNote = 20; //px unit
+            if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
+                topPosition = prevFootnoteBottomPosition + marginTopNote;
+            }
+            noteElementToAdd.className = "font-small footnote";
+            noteElementToAdd.style.position = "absolute";
+            noteElementToAdd.style.top = topPosition + "px";
+            prevFootnoteBottomPosition = noteElementToAdd.getBoundingClientRect().height + topPosition;
         }
-        noteElementToAdd.className = "font-small footnote";
-        noteElementToAdd.style.position = "absolute";
-        noteElementToAdd.style.top = topPosition + "px";
-        prevFootnoteBottomPosition = noteElementToAdd.getBoundingClientRect().height + topPosition;
-      }
     }
     noteContainer.style.opacity = 1;
 
 
+}
 
-
-  }
-
-  window.addEventListener("resize", function () {
+window.addEventListener("resize", function () {
     putNotes(".footnote-item");
 
 
+});
 
-
-  });
-
-  $(function () {
+$(function () {
     //porcetange
     $(window).scroll(function () {
-      var hauteur = $(document).height() - $(window).height();
-      var pourcentage = (100 * $(window).scrollTop()) / hauteur;
-      $(".dizaine").css("opacity", 1);
-      $(".compteur_pourcentage").html(Math.round(pourcentage));
+        var hauteur = $(document).height() - $(window).height();
+        var pourcentage = (100 * $(window).scrollTop()) / hauteur;
+        $(".dizaine").css("opacity", 1);
+        $(".compteur_pourcentage").html(Math.round(pourcentage));
     });
 
 
     if ($("html").hasClass("mobile")) {
-      var windowWidth = $(window).width();
+        var windowWidth = $(window).width();
     }
-  });
+});
 
 
 
