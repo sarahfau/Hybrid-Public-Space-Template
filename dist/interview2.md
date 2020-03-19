@@ -1,4 +1,5 @@
 # 02 Preserving fossils for predicting future forms with Olia Lialina
+⚑ Net artist and new media researcher. Based in Berlin, Germany.
 
 SF&emsp;&emsp;*Now, does your current use of the tags make it possible to use them now, as well as in the future? And are you going to make their access more open?*
 

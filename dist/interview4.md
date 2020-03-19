@@ -1,4 +1,5 @@
 # 04 Controlled vocabulary: technique and human autocompletion with Pierke I.S. Bosschieter, Caroline Diepeveen
+⚑ Indexers from the Society of Indexers, UK. Based in Stitswerd and Middelburg, Netherlands.
 
 SF&emsp;&emsp;*The elaboration of an index seems to have similarities with the tagging system: from a full text, it extracts some keywords that will act as reference points. Therefore, the process of indexing implies decision making: where to put the emphasis on, where to direct the reader’s eyes. It implies discerning what is relevant and non relevant information. How do you make this selection? What strategies have you developed while going through this process of indexing?*
 

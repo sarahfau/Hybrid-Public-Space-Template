@@ -1,4 +1,5 @@
-# 03 Human monitoring, with Pierre Mohamed-Petit from NOOR Images
+# 03 Human monitoring with Pierre Mohamed-Petit
+⚑ Digital director at NOOR Images. Based in Amsterdam, Netherlands.
 
 SF&emsp;&emsp;*In the act of tagging, I imagine that photojournalism agencies have a strong responsibility in how images are interpreted. It is not just a neutral description. Therefore, does this specific task the responsibility of only one person, or is it a collaborative process?*
 

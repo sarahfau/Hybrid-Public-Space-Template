@@ -5,8 +5,18 @@
 
 .menu-right-sub a.active{
 	background-color: #f0f0f0;
-	padding-top: 3px;
-	padding-right: 2px;
+	padding-top: 2px;
+}
+
+.menu-right-sub a{
+	padding-top: 2px;
+	-moz-transition: all 1s ease-out;
+	/* WebKit */
+	-webkit-transition: all 1s ease-out;
+	/* Opera */
+	-o-transition: all 1s ease-out;
+	/* Standard */
+	transition: all 1s ease-out;
 }
 
 .menu{
@@ -50,6 +60,8 @@
 	cursor: pointer;
 	display: flex;
 	flex-wrap: wrap;
+	animation-name: fade;
+	animation-duration: 1.5s;
 
 }
 
@@ -88,6 +100,7 @@
 }
 
 
+
 .active {
 	a{
 	cursor: pointer;
@@ -95,9 +108,9 @@
 	}
 
 
-	h1{
+	/*h1{
 		text-decoration: underline;
-	}
+	}*/
 }
 
 #keywords .active {
@@ -121,6 +134,11 @@
 	animation-name: fade;
 	animation-duration: 2s;
 	line-height: 1.5;
+}
+
+#div1 h1{
+	animation-name: fade;
+	animation-duration: 1.5s;
 }
 
 #div1 em{
@@ -260,6 +278,11 @@ strong{
 	font-weight: normal;
 	padding-right: 5px;
 	padding-left: 5px;
+
+}
+
+strong:hover{
+	color: red;
 
 }
 
