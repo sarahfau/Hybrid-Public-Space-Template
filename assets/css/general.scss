@@ -1,166 +1,164 @@
-.menu-right-sub {
+.menu-right-sub{
 
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.menu-right-sub a.active{
+	background-color: #f0f0f0;
+	padding-top: 3px;
+	padding-right: 2px;
 }
 
 
-.menu-right-sub .active {
+.menu{
 
-  text-decoration: underline;
+	border-bottom: 1px solid grey;
+	position: fixed;
+	background: white;
+	width: 100%;
+	z-index: 3;
+	padding-top: 55px;
+	padding-bottom: 15px;
+	font-size: 1.4rem;
+	line-height: 20px;
 }
-
-.menu {
-
-  border-bottom: 1px solid black;
-  position: fixed;
-  background: white;
-  width: 100%;
-  z-index: 3;
-  padding-top: 60px;
-  padding-bottom: 15px;
-  font-size: 1.5rem;
-  line-height: 20px;
-}
-
-.menu-right {
-  font-family: AtlasTypewriter-Light, monospace;
-  font-size: 1.2rem;
-  width: 32%;
-  float: right;
-  height: 100%;
-  background: white;
-  z-index: 10;
-  position: fixed;
-  border-left: 1px solid black;
-  margin-left: 68%;
-  overflow-y: scroll;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 58px;
-  //margin-top: 43px;
-  line-height: 20px;
+.menu-right{
+	font-family: AtlasTypewriter-Light, monospace;
+	font-size: 1.2rem;
+	width: 30%;
+	float:right;
+	height: 100%;
+	background: white;
+	z-index: 10;
+	position: fixed;
+	border-left: 1px solid grey;
+	margin-left: 70%;
+	overflow-y: scroll;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 55px;
+	//margin-top: 43px;
+	line-height: 20px;
 
 
-  #div1 p {
-    display: none;
-  }
+	#div1 p{
+		display: none;
+	}
 
 }
 
-#keywords {
-  cursor: pointer;
-  display: flex;
-  flex-wrap: wrap;
-
-  .active{
-
-    text-decoration: underline;
-  }
+#keywords{
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
 
 }
 
 #keywords a {
-  flex-grow: 1;
-  width: 33%;
-  padding-top: 0;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  font-family: AtlasTypewriter-Light, monospace;
-  font-size: 1.2rem;
-  line-height: 1.5;
+	flex-grow: 1;
+	width: 33%;
+	padding-top: 0;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	font-family: AtlasTypewriter-Light, monospace;
+	font-size: 1.2rem;
+	line-height: 1.5;
 
 
 }
 
-.menu-right h1 {
-  font-size: 1.2rem;
-  font-family: AtlasTypewriter-Light, monospace;
-  font-weight: normal;
-  margin-bottom: 0;
-  line-height: 1.3;
-  cursor: pointer;
 
-}
-
-.menu-right .active h1 {
-  text-decoration: underline;
-}
-
-
-.abrir .active h1 {
-  text-decoration: underline;
-
-}
-
-h1.active{
-
-  text-decoration: underline;
-}
-
-#div1 h1:first-child {
-
-  margin-bottom: 15px;
-
-}
-
-#div1 h1:active {
-
-  cursor: pointer;
-  user-select: none;
-  text-decoration: underline;
+.menu-right a{
+	font-size: 1.4rem;
+	font-family: AtlasTypewriter-Light, monospace;
+	line-height: 20px;
 
 }
 
 
-#div1 p {
 
-  display: none;
-  animation-name: fade;
-  animation-duration: 2s;
-  line-height: 1.5;
+#div1 h1{
+	font-size: 1.2rem;
+	cursor: pointer;
+	user-select: none;
+	font-family: AtlasTypewriter-Light, monospace;
+	font-weight: normal;
+	margin-bottom: 0;
+	line-height: 1.3;
+
 }
 
-#div1 em {
-  font-size: 1.2rem;
-  line-height: 1.5;
+
+.active {
+	a{
+	cursor: pointer;
+	user-select: none;
+	}
+
+
+	h1{
+		text-decoration: underline;
+	}
+}
+
+#keywords .active {
+	text-decoration: underline;
+
+}
+
+
+#div1 h1:first-child{
+
+	margin-bottom: 15px;
+
+
+}
+
+
+
+#div1 p{
+
+	display: none;
+	animation-name: fade;
+	animation-duration: 2s;
+	line-height: 1.5;
+}
+
+#div1 em{
+	font-size: 1.2rem;
+	line-height: 1.5;
 
 
 }
 
 .fade {
-  animation-name: fade;
-  animation-duration: 5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
+	animation-name: fade;
+	animation-duration: 5s;
   }
-  to {
-    opacity: 1;
+  @keyframes fade {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
   }
-}
 
-.content-article > H1 {
-  font-size: 1em;
-  visibility: hidden;
-  //margin: 0px;
-}
+.content-article> H1 {
+	font-size: 1em;
+	visibility: hidden;
+	//margin: 0px;
+	}
 
 
 /* Navigation */
 #sidebar {
-  margin-left: 5vw;
-  z-index: 5;
+margin-left: 5vw;
+	z-index: 5;
 
-  width: 100%;
-
-
-}
+	width: 100%;
 
 
-#sidebar .active {
-  background-color: #f0f0f0;
 
 }
 
@@ -169,140 +167,144 @@ h1.active{
 }
 
 #sidebar a:focus {
-  background-color: #f0f0f0;
+	background-color: #f0f0f0;
 
 }
-
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-  font-size: 62.5%;
-  /* 1em = 10px */
+	font-size: 62.5%;
+	/* 1em = 10px */
 }
 
 /* Fonfaces */
 
 
+
 @font-face {
-  font-family: 'AtlasGrotesk-Light';
-  src: url("/assets/typefaces/AtlasGrotesk-Light.otf") format("opentype");
-  font-weight: normal;
+	font-family: 'AtlasGrotesk-Light';
+	src: url("/assets/typefaces/AtlasGrotesk-Light.otf") format("opentype");
+	font-weight: normal;
 
 }
 
 @font-face {
-  font-family: 'AtlasTypewriter-Light';
-  src: url("/assets/typefaces/AtlasTypewriter-Light.otf") format("opentype");
-  font-weight: normal;
+	font-family: 'AtlasTypewriter-Light';
+	src: url("/assets/typefaces/AtlasTypewriter-Light.otf") format("opentype");
+	font-weight: normal;
 }
 
 body {
-  box-sizing: border-box;
-  /* CSS alignements */
-  font-family: 'AtlasGrotesk-Light', sans-serif;
-  font-size: 1.7rem;
-  /* = 18px */
-  line-height: 1.3;
-  font-weight: 400;
-  /* regular */
-  /* OpenType features: kerning, ligatures & contextual alternates */
-  font-kerning: normal;
-  /* CSS3 */
-  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  -moz-font-feature-settings: "kern=1", "liga=1", "calt=1";
-  /* Firefox 4.0 to 14.0 */
-  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  /* Firefox 15.0 onwards */
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  /* Make rendering look more consistent across platforms */
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	/* CSS alignements */
+	font-family: 'AtlasGrotesk-Light', sans-serif;
+	font-size: 1.7rem;
+	/* = 18px */
+	line-height: 1.3;
+	font-weight: 400;
+	/* regular */
+	/* OpenType features: kerning, ligatures & contextual alternates */
+	font-kerning: normal;
+	/* CSS3 */
+	-webkit-font-feature-settings: "kern"1, "liga"1, "calt"1;
+	-moz-font-feature-settings: "kern=1", "liga=1", "calt=1";
+	/* Firefox 4.0 to 14.0 */
+	-moz-font-feature-settings: "kern"1, "liga"1, "calt"1;
+	/* Firefox 15.0 onwards */
+	font-feature-settings: "kern"1, "liga"1, "calt"1;
+	/* Make rendering look more consistent across platforms */
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale;
 
 }
 
 .footnote-backref {
-  display: none;
+	display: none;
 }
 
 .footnote {
-  font-size: 1.15rem;
-  border-top-style: solid;
-  border-top-width: thin;
-  border-top-color: #999999;
-  float: right;
-  clear: both;
-  padding-top: 0.5em;
-  margin-left: 20px;
-  margin-right: 50px;
-  width: 200px;
+	font-size: 1.15rem;
+	border-top-style:solid;
+    border-top-width:thin;
+    border-top-color:#999999;
+	float: right;
+	clear: both;
+	padding-top: 0.5em;
+	margin-left: 20px;
+	margin-right: 50px;
+	width: 200px;
 }
 
 
 .font-title {
-  font-family: 'AtlasGrotesk-Light', sans-serif;
-  font-size: 5rem;
-  line-height: 1.1;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
+	font-size: 5rem;
+	line-height: 1.1;
 }
 
 h1 {
-  font-family: 'AtlasGrotesk-Light', sans-serif;
-  font-size: 2.3em;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
+	font-size: 2.3em;
 }
 
 
-strong {
-  font-family: 'AtlasGrotesk-Light', sans-serif;
+strong{
+	font-family: 'AtlasGrotesk-Light', sans-serif;
 }
 
 
-img {
-  width: 81%;
-  height: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+img
+ {
+	width: 81%;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 a {
-  color: #000;
-  text-decoration: none;
-  border: 0;
-  font-family: 'AtlasGrotesk-Light', sans-serif;
-  cursor: pointer;
+	color: #000;
+	text-decoration: none;
+	border: 0;
+	font-family: 'AtlasGrotesk-Light', sans-serif;
+	cursor: pointer;
 }
 
 a:focus {
-  outline: 0;
+	outline: 0;
 }
 
 p {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 ul,
 ol,
 li {
-  text-indent: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	text-indent: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 
 sup {
-  font-size: 65%;
-  line-height: 1;
+	font-size: 65%;
+	line-height: 1;
 }
 
 
+
+
+
 .break {
-  display: block;
+	display: block;
 }
 
 
