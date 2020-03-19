@@ -4,6 +4,7 @@ const colophonButton = document.querySelector('.colophon-menu');
 const interviewDiv = document.querySelector('.interviews')
 const indexDiv = document.querySelector('.index-words')
 const colophonDiv = document.querySelector('.colophon')
+import $ from 'jquery'
 
 interviewButton.onclick = function () {
     indexDiv.style.display = "none";
