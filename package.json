@@ -24,13 +24,16 @@
     "fs-readdir": "0.0.3",
     "jquery": "^3.4.1",
     "markdown-it": "^10.0.0",
+    "markdown-it-attrs": "^3.0.2",
     "markdown-it-classy": "^0.2.0",
     "markdown-it-container": "^2.0.0",
     "markdown-it-footnote": "^3.0.2",
-    "parcel": "^1.12.4",
     "requirejs": "^2.3.6"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "parcel": "^1.12.4",
+    "prettier": "^1.19.1",
     "sass": "^1.26.2"
   }
 }
