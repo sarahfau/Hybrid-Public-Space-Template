@@ -21,7 +21,7 @@ $(document).ready(function () {
                 $(".abrir").click(function () {
                     $(".abrir").removeClass("active");
                     $(this).addClass("active");
-                } );
+                });
             });
         }
     }
@@ -30,10 +30,13 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $(".abrir h1").click(function () {
+            $(".abrir h1").removeClass("active");
             $(this).siblings().toggle('5000');
             $(this).toggleClass("active");
             // $(this).toggleClass("underline");
         });
+
+
     }, 2000);
 
 

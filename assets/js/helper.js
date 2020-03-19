@@ -6,13 +6,10 @@ const indexDiv = document.querySelector('.index-words')
 const colophonDiv = document.querySelector('.colophon')
 
 
-
 interviewButton.onclick = function () {
     indexDiv.style.display = "none";
     colophonDiv.style.display = "none";
     interviewDiv.style.display = "block";
-
-
 
 
 };
@@ -39,8 +36,18 @@ setTimeout(function () {
         $("#sidebar a").removeClass("active");
         $(this).toggleClass("active");
 
-        // $(this).toggleClass("underline");
     });
+
+    $("menu-right-sub li a").click(function () {
+        console.log(hola);
+        $("menu-right-sub li a").removeClass("active");
+        $(this).toggleClass("active");
+
+    });
+
+
 }, 2000);
+
+
 
 
