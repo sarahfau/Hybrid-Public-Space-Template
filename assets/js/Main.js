@@ -4,14 +4,16 @@ import $ from 'jquery'
 $(document).ready(function () {
 
 
-
-
     var md = require('markdown-it')()
         .use(require('markdown-it-container'))
         .use(require('markdown-it-footnote'))
         .use(require('markdown-it-attrs'))
         .use(require('markdown-it-classy'));
 
+
+    $.get("colophon.md", function (data) {
+        $('#content-colophon').html(md.render(data));
+    });
 
 
     $.get("Thesis.md", function (data) {
