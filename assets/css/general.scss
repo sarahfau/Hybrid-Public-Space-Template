@@ -195,23 +195,23 @@
 
 /* Navigation */
 #sidebar {
-margin-left: 5vw;
+	margin-left: 5vw;
 	z-index: 5;
-
 	width: 100%;
-
-
-
 }
 
-#sidebar a:hover {
-  background-color: #f0f0f0;
+.menu-main a{
+	padding-top: 2px;
+	-moz-transition: all 1s ease-out;
+	/* WebKit */
+	-webkit-transition: all 1s ease-out;
+	/* Opera */
+	-o-transition: all 1s ease-out;
+	/* Standard */
+	transition: all 1s ease-out;
 }
 
-#sidebar a:focus {
-	background-color: #f0f0f0;
 
-}
 html,
 body {
 	width: 100%;
@@ -364,7 +364,7 @@ sup {
 #sidebar {
 .active{
 	background-color: #f0f0f0;
-
+	padding-top: 2px;
 }
 
 
