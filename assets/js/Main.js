@@ -4,6 +4,8 @@ import $ from 'jquery'
 $(document).ready(function () {
 
 
+
+
     var md = require('markdown-it')()
         .use(require('markdown-it-container'))
         .use(require('markdown-it-footnote'))
@@ -25,12 +27,18 @@ $(document).ready(function () {
 
             });
 
+
+
+
             putNotes(".footnote-item")
             var elements = document.getElementsByClassName("footnote-ref");
             for (var i = 0; i < elements.length; ++i) {
                 elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
             }
         }, 200);
+
+
+
 
     });
 
@@ -107,3 +115,10 @@ $(document).ready(function(){
   });
 });
 
+
+setTimeout(function () {
+    $(".main-menu li a").click(function () {
+        $(this).toggleID("active");
+        // $(this).siblings().removeClass("active");
+
+    });});
