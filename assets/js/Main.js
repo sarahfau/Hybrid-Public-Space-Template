@@ -21,7 +21,7 @@ $(document).ready(function () {
 
             $(".content-article h1").each(function () {
                 $(this).prepend('<a name="' + $(this).text() + '"></a>');
-                $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
+                $(list).append('<li><a class="menu-main" href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
 
             });
 
@@ -101,7 +101,7 @@ $(function () {
 });
 
 $(document).ready(function(){
-  $('ul li a').click(function(){
+  $('ul li a').click(function(){ //ce ligne vise tout les <a>
     $('li a').removeClass("active");
     $(this).addClass("active");
   });
