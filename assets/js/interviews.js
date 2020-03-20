@@ -82,6 +82,28 @@ $(document).ready(function () {
 
         });
 
+        $(".open-interview-5").click(function () {
+            $(".interview-5 h1").toggleClass("active");
+            $(".interview-5 p").toggle();
+            $(".interview-1 p").hide();
+            $(".interview-2 p").hide();
+            $(".interview-3 p").hide();
+            $(".interview-4 p").hide();
+            $(".interview-6 p").hide();
+
+        });
+
+        $(".open-interview-6").click(function () {
+            $(".interview-6 h1").toggleClass("active");
+            $(".interview-6 p").toggle();
+            $(".interview-1 p").hide();
+            $(".interview-2 p").hide();
+            $(".interview-3 p").hide();
+            $(".interview-4 p").hide();
+            $(".interview-5 p").hide();
+
+        });
+
 
 
 
