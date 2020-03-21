@@ -14,7 +14,7 @@ export function getmarkdown() {
         .then(response => response.text())
         .then(data => {
 
-            $('#content').html(md.render(data));
+            document.querySelector('#content').innerHTML=(md.render(data));
         })
 
 };

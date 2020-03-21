@@ -4,7 +4,7 @@ import {menuInterviews,getInterviewsToMarkdown} from './interviews'
 import {espaceFine} from './espacefine.min'
 import {menuRight} from './helper'
 import {ResizeFootnotes,porcentage,putNotes,footnotesElements,createMenu,getmarkdown} from './main_content'
-
+import {getMarkdownToColophon} from './colophon'
 window.addEventListener("DOMContentLoaded", (event) => {
     findWord();
     getmarkdown();
@@ -17,4 +17,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     espaceFine();
     menuRight();
     menuInterviews();
+    getMarkdownToColophon()
+
 });
