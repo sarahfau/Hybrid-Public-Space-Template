@@ -78,6 +78,31 @@
 
 }
 
+#content-colophon{
+	display: flex;
+	flex-wrap: wrap;
+	animation-name: fade;
+	animation-duration: 1.5s;
+
+}
+
+#content-colophon p {
+	padding-top: 0;
+	padding-right: 40px;
+	font-family: AtlasTypewriter-Light, monospace;
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+#content-colophon strong{
+	font-size: 1.3rem;
+	font-family: "AtlasGrotesk-Light", sans-serif;
+	text-decoration: none;
+	padding: 0;
+	color:black;
+
+}
+
 
 .menu-right a{
 	font-size: 1.4rem;
@@ -170,23 +195,23 @@
 
 /* Navigation */
 #sidebar {
-margin-left: 5vw;
+	margin-left: 5vw;
 	z-index: 5;
-
 	width: 100%;
-
-
-
 }
 
-#sidebar a:hover {
-  background-color: #f0f0f0;
+.menu-main a{
+	padding-top: 2px;
+	-moz-transition: all 1s ease-out;
+	/* WebKit */
+	-webkit-transition: all 1s ease-out;
+	/* Opera */
+	-o-transition: all 1s ease-out;
+	/* Standard */
+	transition: all 1s ease-out;
 }
 
-#sidebar a:focus {
-	background-color: #f0f0f0;
 
-}
 html,
 body {
 	width: 100%;
@@ -340,7 +365,7 @@ sup {
 #sidebar {
 .active{
 	background-color: #f0f0f0;
-
+	padding-top: 2px;
 }
 
 
