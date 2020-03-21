@@ -1,4 +1,5 @@
 import $ from 'jquery'
+
 const interviewButton = document.querySelector('.interview-menu');
 const indexButton = document.querySelector('.index-menu');
 const colophonButton = document.querySelector('.colophon-menu');
@@ -35,8 +36,7 @@ export function menuRight() {
             $(".menu-right-sub li a").removeClass("active");
             $(this).toggleClass("active");
         });
-    }, 2000);
-
+    }, 500);
 
 
 //Menu highlights
@@ -47,6 +47,22 @@ export function menuRight() {
             // $(this).toggle("active");
         });
     });
+};
+
+export function smoothScroll() {
+    $("a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
+
+
 };
 
 

@@ -13,86 +13,84 @@ export function getmarkdown() {
     fetch('Thesis.md')
         .then(response => response.text())
         .then(data => {
-
-            document.querySelector('#content').innerHTML=(md.render(data));
+            document.querySelector('#content').innerHTML = (md.render(data));
         })
 
 };
 
- export function createMenu() {
-        setTimeout(function () {
-            var list = document.querySelector("#sidebar")
-            var menuH1s = document.querySelector(".content-article").querySelectorAll("h1");
-            // console.log(menuH1s);
-            $(".content-article h1").each(function () {
-                $(this).prepend('<a name="' + $(this).text() + '"></a>');
-                $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
-                // noteContainer.style.transition = "opacity 1000ms ease-in-out";
-            });
-        }, 500);
+export function createMenu() {
+    setTimeout(function () {
+        var list = document.querySelector("#sidebar")
+        var menuH1s = document.querySelector(".content-article").querySelectorAll("h1");
+        // console.log(menuH1s);
+        $(".content-article h1").each(function () {
+            $(this).prepend('<a name="' + $(this).text() + '"></a>');
+            $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
+            // noteContainer.style.transition = "opacity 1000ms ease-in-out";
+        });
+    }, 500);
 
 };
 
 export function footnotesElements() {
+    setTimeout(function () {
     var elements = document.getElementsByClassName("footnote-ref");
     for (var i = 0; i < elements.length; ++i) {
         elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
+        console.log(elements[i]);
     }
+    }, 500);
 }
 
 export function putNotes(footerClassName) {
 
     setTimeout(function () {
-
-
-    const noteContainer = document.querySelector(".r-notes-container");
-    noteContainer.style.opacity = 0;
-    noteContainer.style.transition = "opacity 1000ms ease-in-out";
-    noteContainer.innerHTML = "";
-    const footerNotesElements = document.querySelectorAll(footerClassName);
-    let prevFootnoteBottomPosition = 0;
-    for (const footerElement of footerNotesElements) {
-        footerElement.style.display = "none";
-        const copyOfFooterElement = footerElement.cloneNode(true);
-        copyOfFooterElement.style.display = "block";
-        const footerID = copyOfFooterElement.id;
-        const num = footerID.substring(2);
-        const numElementInTextID = "#fnref" + num;
-        const numElement = document.querySelector(numElementInTextID);
-        if (numElement instanceof HTMLElement) {
-            const noteElementToAdd = noteContainer.appendChild(copyOfFooterElement);
-            let first;
-            first = false;
-            const noteNumberValueElement = document.createElement("span");
-            noteNumberValueElement.innerText = num + " ";
-            noteNumberValueElement.className = "footnote-counter";
-            copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
-            let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-            const marginTopNote = 20; //px unit
-            if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
-                topPosition = prevFootnoteBottomPosition + marginTopNote;
+        const noteContainer = document.querySelector(".r-notes-container");
+        noteContainer.style.opacity = 0;
+        noteContainer.style.transition = "opacity 1000ms ease-in-out";
+        noteContainer.innerHTML = "";
+        const footerNotesElements = document.querySelectorAll(footerClassName);
+        let prevFootnoteBottomPosition = 0;
+        for (const footerElement of footerNotesElements) {
+            footerElement.style.display = "none";
+            const copyOfFooterElement = footerElement.cloneNode(true);
+            copyOfFooterElement.style.display = "block";
+            const footerID = copyOfFooterElement.id;
+            const num = footerID.substring(2);
+            const numElementInTextID = "#fnref" + num;
+            const numElement = document.querySelector(numElementInTextID);
+            if (numElement instanceof HTMLElement) {
+                const noteElementToAdd = noteContainer.appendChild(copyOfFooterElement);
+                let first;
+                first = false;
+                const noteNumberValueElement = document.createElement("span");
+                noteNumberValueElement.innerText = num + " ";
+                noteNumberValueElement.className = "footnote-counter";
+                copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
+                let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+                const marginTopNote = 20; //px unit
+                if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
+                    topPosition = prevFootnoteBottomPosition + marginTopNote;
+                }
+                noteElementToAdd.className = "font-small footnote";
+                noteElementToAdd.style.position = "absolute";
+                noteElementToAdd.style.top = topPosition + "px";
+                prevFootnoteBottomPosition = noteElementToAdd.getBoundingClientRect().height + topPosition;
             }
-            noteElementToAdd.className = "font-small footnote";
-            noteElementToAdd.style.position = "absolute";
-            noteElementToAdd.style.top = topPosition + "px";
-            prevFootnoteBottomPosition = noteElementToAdd.getBoundingClientRect().height + topPosition;
         }
-    }
-    noteContainer.style.opacity = 1;
-
-
-},500);
+        noteContainer.style.opacity = 1;
+    }, 500);
 };
 
- export function ResizeFootnotes(){
-window.addEventListener("resize", function () {
-    putNotes(".footnote-item");
+export function ResizeFootnotes() {
+    window.addEventListener("resize", function () {
+        putNotes(".footnote-item");
 
 
-});
+    });
 };
 
- export function porcentage() {
+export function porcentage() {
     //porcetange
     $(window).scroll(function () {
         var hauteur = $(document).height() - $(window).height();

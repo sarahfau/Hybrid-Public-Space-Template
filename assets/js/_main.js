@@ -2,7 +2,7 @@ import $ from 'jquery'
 import { findWord } from './index-words'
 import {menuInterviews,getInterviewsToMarkdown} from './interviews'
 import {espaceFine} from './espacefine.min'
-import {menuRight} from './helper'
+import {menuRight,smoothScroll} from './helper'
 import {ResizeFootnotes,porcentage,putNotes,footnotesElements,createMenu,getmarkdown} from './main_content'
 import {getMarkdownToColophon} from './colophon'
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -17,6 +17,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     espaceFine();
     menuRight();
     menuInterviews();
-    getMarkdownToColophon()
+    getMarkdownToColophon();
+    smoothScroll();
 
 });

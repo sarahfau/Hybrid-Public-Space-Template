@@ -1,36 +1,45 @@
 import $ from 'jquery'
 import {md} from './main_content'
+
 const interviewsList = ["interview1.md", "interview2.md", "interview3.md", "interview4.md", "interview5.md", "interview6.md"];
 
 
-  export function getInterviewsToMarkdown() {
+export function getInterviewsToMarkdown() {
 
-        let counter = 1;
-        for (var i = 0; i < interviewsList.length; i++) {
-            $.get(interviewsList[i], function (data) {
+    let counter = 1;
+    for (var i = 0; i < interviewsList.length; i++) {
+
+
+        fetch(interviewsList[i])
+            .then(response => response.text())
+            .then(data => {
+
                 var locationInterviews = document.querySelector('#div1')
                 var newContent = md.render(data);
                 var newDiv = document.createElement("div");
                 newDiv.className = "abrir";
-                newDiv.classList.add("interview-"+counter++);
+                newDiv.classList.add("interview-" + counter++);
                 newDiv.innerHTML = newContent;
                 document.getElementById('div1').appendChild(newDiv);
                 var h1s = newDiv.getElementsByTagName('h1')[0];
-                $(".abrir").click(function () {
-                    $(".abrir").removeClass("active");
-                    $(this).addClass("active");
+                document.querySelector(".abrir").click(function () {
+                    document.querySelector(".abrir").removeClass("active");
+                    this.addClass("active");
                 });
-            });
-        }
+
+            })
+
+
     }
+};
 
 
+export function menuInterviews() {
+    setTimeout(function () {
 
-      export function menuInterviews() {
-          setTimeout(function () {
+        //TODO passer a javascript
 
         $(".abrir h1").click(function () {
-            console.log('ggg');
             $(".abrir h1").removeClass("active");
             $(this).siblings().toggle('5000');
             $(this).toggleClass("active");
@@ -107,36 +116,34 @@ const interviewsList = ["interview1.md", "interview2.md", "interview3.md", "inte
         });
 
 
-
-              $(".open-interview-5").click(function () {
-                  $(".interview-5 h1").toggleClass("active");
-                  $(".interview-5 p").toggle();
-                  $(".interview-1 p").hide();
-                  $(".interview-2 p").hide();
-                  $(".interview-3 p").hide();
-                  $(".interview-4 p").hide();
-                  $(".interview-6 p").hide();
-
-
-              });
+        $(".open-interview-5").click(function () {
+            $(".interview-5 h1").toggleClass("active");
+            $(".interview-5 p").toggle();
+            $(".interview-1 p").hide();
+            $(".interview-2 p").hide();
+            $(".interview-3 p").hide();
+            $(".interview-4 p").hide();
+            $(".interview-6 p").hide();
 
 
-              $(".open-interview-6").click(function () {
-                  $(".interview-6 h1").toggleClass("active");
-                  $(".interview-6 p").toggle();
-                  $(".interview-1 p").hide();
-                  $(".interview-2 p").hide();
-                  $(".interview-3 p").hide();
-                  $(".interview-4 p").hide();
-                  $(".interview-5 p").hide();
+        });
 
 
+        $(".open-interview-6").click(function () {
+            $(".interview-6 h1").toggleClass("active");
+            $(".interview-6 p").toggle();
+            $(".interview-1 p").hide();
+            $(".interview-2 p").hide();
+            $(".interview-3 p").hide();
+            $(".interview-4 p").hide();
+            $(".interview-5 p").hide();
 
-              });
+
+        });
 
 
-          },500);
-    };
+    }, 500);
+};
 
 
 

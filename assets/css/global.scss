@@ -34,6 +34,7 @@ html,body {
 	padding-right: 10px;
 	//position: relative;
 	scroll-padding-top: 200px;
+	scroll-behavior: smooth;
 }
 
 .fade {
@@ -79,6 +80,7 @@ article {
 	padding-bottom: 100px;
 	margin-right: 140px;
 	scroll-behavior: smooth;
+
 }
 
 .notes-images {

@@ -4,6 +4,7 @@ import $ from 'jquery'
 
 //TODO add sorting alphabetically https://isotope.metafizzy.co/sorting.html
 //TODO counter https://www.the-art-of-web.com/javascript/search-highlight-demo/
+//TODO jump from word to word https://jsfiddle.net/julmot/973gdh8g/
 export function findWord() {
 
 
