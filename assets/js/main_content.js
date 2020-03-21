@@ -1,59 +1,55 @@
 import $ from 'jquery'
+
+
+export const md = require('markdown-it')()
+    .use(require('markdown-it-container'))
+    .use(require('markdown-it-footnote'))
+    .use(require('markdown-it-attrs'))
+    .use(require('markdown-it-classy'));
+
 // Take the Markdown File and passes it to HTML
+export function getmarkdown() {
 
-$(document).ready(function () {
+    fetch('Thesis.md')
+        .then(response => response.text())
+        .then(data => {
 
+            $('#content').html(md.render(data));
+        })
 
+};
 
-
-    var md = require('markdown-it')()
-        .use(require('markdown-it-container'))
-        .use(require('markdown-it-footnote'))
-        .use(require('markdown-it-attrs'))
-        .use(require('markdown-it-classy'));
-
-
-
-    $.get("Thesis.md", function (data) {
-        $('#content').html(md.render(data));
-
+ export function createMenu() {
         setTimeout(function () {
-
-            var list = $('#sidebar');
-
+            var list = document.querySelector("#sidebar")
+            var menuH1s = document.querySelector(".content-article").querySelectorAll("h1");
+            // console.log(menuH1s);
             $(".content-article h1").each(function () {
                 $(this).prepend('<a name="' + $(this).text() + '"></a>');
-                $(list).append('<li><a class="menu-main" href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
-
+                $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
+                // noteContainer.style.transition = "opacity 1000ms ease-in-out";
             });
+        }, 500);
+
+};
+
+export function footnotesElements() {
+    var elements = document.getElementsByClassName("footnote-ref");
+    for (var i = 0; i < elements.length; ++i) {
+        elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
+    }
+}
+
+export function putNotes(footerClassName) {
+
+    setTimeout(function () {
 
 
-
-
-            putNotes(".footnote-item")
-            var elements = document.getElementsByClassName("footnote-ref");
-            for (var i = 0; i < elements.length; ++i) {
-                elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
-            }
-        }, 200);
-
-
-
-
-    });
-
-});
-
-
-function putNotes(footerClassName) {
     const noteContainer = document.querySelector(".r-notes-container");
     noteContainer.style.opacity = 0;
     noteContainer.style.transition = "opacity 1000ms ease-in-out";
     noteContainer.innerHTML = "";
-
     const footerNotesElements = document.querySelectorAll(footerClassName);
-
-
     let prevFootnoteBottomPosition = 0;
     for (const footerElement of footerNotesElements) {
         footerElement.style.display = "none";
@@ -85,15 +81,18 @@ function putNotes(footerClassName) {
     noteContainer.style.opacity = 1;
 
 
-}
+},500);
+};
 
+ export function ResizeFootnotes(){
 window.addEventListener("resize", function () {
     putNotes(".footnote-item");
 
 
 });
+};
 
-$(function () {
+ export function porcentage() {
     //porcetange
     $(window).scroll(function () {
         var hauteur = $(document).height() - $(window).height();
@@ -106,19 +105,5 @@ $(function () {
     if ($("html").hasClass("mobile")) {
         var windowWidth = $(window).width();
     }
-});
+};
 
-$(document).ready(function(){
-  $('ul li a').click(function(){ //ce ligne vise tout les <a>
-    $('li a').removeClass("active");
-    $(this).addClass("active");
-  });
-});
-
-
-setTimeout(function () {
-    $(".main-menu li a").click(function () {
-        $(this).toggleID("active");
-        // $(this).siblings().removeClass("active");
-
-    });});

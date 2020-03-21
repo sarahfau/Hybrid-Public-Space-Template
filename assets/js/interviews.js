@@ -1,12 +1,10 @@
 import $ from 'jquery'
-
-const md = require('markdown-it')().use(require('markdown-it-container')).use(require('markdown-it-footnote')).use(require('markdown-it-classy'));
+import {md} from './main_content'
 const interviewsList = ["interview1.md", "interview2.md", "interview3.md", "interview4.md", "interview5.md", "interview6.md"];
 
 
-$(document).ready(function () {
+  export function getInterviewsToMarkdown() {
 
-    function getInterviewsToMarkdown() {
         let counter = 1;
         for (var i = 0; i < interviewsList.length; i++) {
             $.get(interviewsList[i], function (data) {
@@ -26,11 +24,14 @@ $(document).ready(function () {
         }
     }
 
-    getInterviewsToMarkdown();
 
-    setTimeout(function () {
+
+      export function menuInterviews() {
+          setTimeout(function () {
+
         $(".abrir h1").click(function () {
-             $(".abrir h1").removeClass("active");
+            console.log('ggg');
+            $(".abrir h1").removeClass("active");
             $(this).siblings().toggle('5000');
             $(this).toggleClass("active");
         });
@@ -80,22 +81,43 @@ $(document).ready(function () {
             $(".interview-5 p").hide();
             $(".interview-6 p").hide();
 
+
         });
 
 
 
+              $(".open-interview-5").click(function () {
+                  $(".interview-5 h1").toggleClass("active");
+                  $(".interview-5 p").toggle();
+                  $(".interview-1 p").hide();
+                  $(".interview-2 p").hide();
+                  $(".interview-3 p").hide();
+                  $(".interview-4 p").hide();
+                  $(".interview-6 p").hide();
+
+
+              });
+
+
+              $(".open-interview-6").click(function () {
+                  $(".interview-6 h1").toggleClass("active");
+                  $(".interview-6 p").toggle();
+                  $(".interview-1 p").hide();
+                  $(".interview-2 p").hide();
+                  $(".interview-3 p").hide();
+                  $(".interview-4 p").hide();
+                  $(".interview-5 p").hide();
 
 
 
-        document.addEventListener("DOMContentLoaded", function(event) {
-            espaceFine();
-        });
+              });
 
 
-    }, 2000);
+          },500);
+    };
 
 
-});
+
 
 
 
