@@ -47,14 +47,14 @@ export function menuInterviews() {
         //TODO reparer ce code! c'est sale
 
 
-        var inter = document.querySelectorAll('.abrir');
-        console.log(inter);
-
-        inter.click(function () {
-
-            console.log(inter);
-
-        });
+        // var inter = document.querySelectorAll('.abrir');
+        // console.log(inter);
+        //
+        // inter.click(function () {
+        //
+        //     console.log(inter);
+        //
+        // });
 
 
 
