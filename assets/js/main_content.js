@@ -8,6 +8,18 @@ export const md = require('markdown-it')()
     .use(require('markdown-it-classy'));
 
 // Take the Markdown File and passes it to HTML
+
+export function getmarkdownFromAnywhere(textMD,DIV) {
+
+    fetch(textMD)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(DIV).innerHTML = (md.render(data));
+        })
+
+};
+
+
 export function getmarkdown() {
 
     fetch('Thesis.md')
@@ -26,7 +38,6 @@ export function createMenu() {
         $(".content-article h1").each(function () {
             $(this).prepend('<a name="' + $(this).text() + '"></a>');
             $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
-            // noteContainer.style.transition = "opacity 1000ms ease-in-out";
         });
     }, 500);
 
@@ -37,7 +48,6 @@ export function footnotesElements() {
     var elements = document.getElementsByClassName("footnote-ref");
     for (var i = 0; i < elements.length; ++i) {
         elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
-        console.log(elements[i]);
     }
     }, 500);
 }
@@ -45,30 +55,35 @@ export function footnotesElements() {
 export function putNotes(footerClassName) {
 
     setTimeout(function () {
+        const footerNotesElements = document.querySelectorAll(footerClassName);
         const noteContainer = document.querySelector(".r-notes-container");
+        let prevFootnoteBottomPosition = 0;
         noteContainer.style.opacity = 0;
         noteContainer.style.transition = "opacity 1000ms ease-in-out";
         noteContainer.innerHTML = "";
-        const footerNotesElements = document.querySelectorAll(footerClassName);
-        let prevFootnoteBottomPosition = 0;
+
         for (const footerElement of footerNotesElements) {
-            footerElement.style.display = "none";
+
             const copyOfFooterElement = footerElement.cloneNode(true);
-            copyOfFooterElement.style.display = "block";
             const footerID = copyOfFooterElement.id;
             const num = footerID.substring(2);
             const numElementInTextID = "#fnref" + num;
             const numElement = document.querySelector(numElementInTextID);
+            copyOfFooterElement.style.display = "block";
+            footerElement.style.display = "none";
             if (numElement instanceof HTMLElement) {
+                const marginTopNote = 20; //px unit
                 const noteElementToAdd = noteContainer.appendChild(copyOfFooterElement);
-                let first;
-                first = false;
                 const noteNumberValueElement = document.createElement("span");
+                let first;
+                let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+                first = false;
                 noteNumberValueElement.innerText = num + " ";
                 noteNumberValueElement.className = "footnote-counter";
                 copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
-                let topPosition = numElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-                const marginTopNote = 20; //px unit
+
+
+
                 if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
                     topPosition = prevFootnoteBottomPosition + marginTopNote;
                 }
@@ -104,4 +119,7 @@ export function porcentage() {
         var windowWidth = $(window).width();
     }
 };
+
+
+
 

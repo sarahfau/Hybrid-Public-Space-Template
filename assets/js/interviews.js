@@ -8,12 +8,9 @@ export function getInterviewsToMarkdown() {
 
     let counter = 1;
     for (var i = 0; i < interviewsList.length; i++) {
-
-
         fetch(interviewsList[i])
             .then(response => response.text())
             .then(data => {
-
                 var locationInterviews = document.querySelector('#div1')
                 var newContent = md.render(data);
                 var newDiv = document.createElement("div");
@@ -26,29 +23,45 @@ export function getInterviewsToMarkdown() {
                     document.querySelector(".abrir").removeClass("active");
                     this.addClass("active");
                 });
-
             })
-
-
     }
 };
 
-
 export function menuInterviews() {
     setTimeout(function () {
-
         //TODO passer a javascript
-
         $(".abrir h1").click(function () {
             $(".abrir h1").removeClass("active");
-            $(this).siblings().toggle('5000');
+            $(this).siblings().toggle();
             $(this).toggleClass("active");
         });
 
 
+        // var abrir =document.querySelector(".abrir");
+        // abrir.click(function () {
+        //     this.removeClass("active");
+        //     this.addClass("active");
+        //
+        // });
+
         //TODO reparer ce code! c'est sale
 
+
+        var inter = document.querySelectorAll('.abrir');
+        console.log(inter);
+
+        inter.click(function () {
+
+            console.log(inter);
+
+        });
+
+
+
+
         $(".open-interview-1").click(function () {
+
+
             $(".interview-1 h1").toggleClass("active");
             $(".interview-1 p").toggle();
             $(".interview-2 p").hide();
