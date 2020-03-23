@@ -1,0 +1,24 @@
+#content-colophon {
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+  p {
+    padding-top: 0;
+    padding-right: 40px;
+    font-family: $secondFont;
+  }
+
+  strong {
+    font-family: $firstFont;
+    text-decoration: none;
+    padding: 0;
+    color: black;
+  }
+
+}
+
+
+
+

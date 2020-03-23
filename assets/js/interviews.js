@@ -11,13 +11,13 @@ export function getInterviewsToMarkdown() {
         fetch(interviewsList[i])
             .then(response => response.text())
             .then(data => {
-                var locationInterviews = document.querySelector('#div1')
+                var locationInterviews = document.querySelector('.interviews-list');
                 var newContent = md.render(data);
                 var newDiv = document.createElement("div");
                 newDiv.className = "abrir";
                 newDiv.classList.add("interview-" + counter++);
                 newDiv.innerHTML = newContent;
-                document.getElementById('div1').appendChild(newDiv);
+                document.querySelector('.interviews-list').appendChild(newDiv);
                 var h1s = newDiv.getElementsByTagName('h1')[0];
                 document.querySelector(".abrir").click(function () {
                     document.querySelector(".abrir").removeClass("active");
@@ -25,7 +25,7 @@ export function getInterviewsToMarkdown() {
                 });
             })
     }
-};
+}
 
 export function menuInterviews() {
     setTimeout(function () {
@@ -73,7 +73,7 @@ export function menuInterviews() {
         });
 
         $(".open-interview-2").click(function () {
-            $(".interview-2 h1").toggleClass("active")
+            $(".interview-2 h1").toggleClass("active");
             $(".interview-2 p").toggle();
             $(".interview-1 p").hide();
             $(".interview-3 p").hide();
@@ -156,7 +156,7 @@ export function menuInterviews() {
 
 
     }, 500);
-};
+}
 
 
 

@@ -1,0 +1,37 @@
+// =============================================================================
+// Variables.scss
+// -----------------------------------------------------------------------------
+// Change values here to make changes to the type, color, cover and layout of
+// your publication. Variable names are always preceeded by a $ (dollar sign).
+// To avoid errors, variables names should not be changed or deleted, and be
+// sure to leave the colons (:) and semi-colons (;) in place.
+
+$accent-color: null;
+$content-background-color: null; // main text area background color
+$secondary-background-color: null; // only for modern theme
+
+
+// Menu colors
+// -----------------------------------------------------------------------------
+$menu-color: $off-black;
+$menu-text-color: $white;
+
+
+// Active link and table-row color
+// -----------------------------------------------------------------------------
+$hover-color: $light-yellow;
+
+// Print/PDF stylesheet
+// -----------------------------------------------------------------------------
+//$print-width: 8.5in;
+//$print-height: 11in;
+//$print-bleed: .125in;
+//
+//$print-base-font-size: 8.5pt;
+//$print-text-color: $black;
+//
+//$print-splash-color: $off-white;
+//
+//$print-entry-image-color: $rich-black;
+//$print-entry-image-display: all; // first | all
+

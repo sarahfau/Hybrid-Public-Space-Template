@@ -1,0 +1,67 @@
+.content-article > H1 {
+  font-size: 1em;
+  visibility: hidden;
+}
+
+.footnote-backref {
+  display: none;
+}
+
+.footnote {
+  font-size: 1.15rem;
+  border-top-style: solid;
+  border-top-width: thin;
+  border-top-color: #999999;
+  float: right;
+  clear: both;
+  padding-top: 0.5em;
+  margin-left: 20px;
+  margin-right: 50px;
+  width: 200px;
+}
+
+.content-article {
+  font-size: 1.7rem;
+  padding-bottom: 100px;
+  margin-right: 140px;
+}
+
+.notes-images {
+  position: absolute;
+  right: 35vw;
+  margin-right: -230px;
+  width: 450px;
+  opacity: 0;
+}
+
+
+.footnote > a {
+  display: inline-block;
+  padding-right: 20px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.pourcentage {
+  position: fixed;
+  width: 4.2vw;
+  top: 20px;
+  text-align: right;
+  z-index: 10;
+  pointer-events: none;
+}
+
+
+.r-notes-container {
+  top: 0;
+
+  a {
+    text-decoration: underline;
+  }
+
+  p {
+    display: inline;
+  }
+}
+
+

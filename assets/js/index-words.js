@@ -8,16 +8,15 @@ import $ from 'jquery'
 export function findWord() {
 
 
-        var keywords = document.querySelector('#keywords');
-        keywords.addEventListener('click', function (event) {
-            var instance = new Mark(document.querySelector("#content"));
-            let target = event.target;
-            let keywordtoSearch = target.innerHTML;
-            instance.unmark(keywordtoSearch);
-            instance.mark(keywordtoSearch);
-            $(target).toggleClass('active').siblings().removeClass('active');
-        }, false);
+    var keywords = document.querySelector('#keywords');
+    keywords.addEventListener('click', function (event) {
+        var instance = new Mark(document.querySelector("#content"));
+        let target = event.target;
+        let keywordtoSearch = target.innerHTML;
+        instance.unmark(keywordtoSearch);
+        instance.mark(keywordtoSearch);
+        $(target).toggleClass('active').siblings().removeClass('active');
+    }, false);
 
 
-
-};
+}

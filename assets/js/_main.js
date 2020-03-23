@@ -14,21 +14,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
     footnotesElements();
     ResizeFootnotes();
     porcentage();
-    getInterviewsToMarkdown()
+    getInterviewsToMarkdown();
     espaceFine();
     menuRight();
     menuInterviews();
     smoothScroll();
     getmarkdownFromAnywhere('colophon.md', '#content-colophon');
-
+    getMarkdownToData("colophon.md");
 });
 
-// export function getMarkdownToData(textMD) {
-//     fetch(textMD)
-//         .then(response => response.text())
-//         .then(data => {
-//             console.log(data);
-//             return data;
-//         })
-// };
+export function getMarkdownToData(textMD) {
+    fetch(textMD)
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            return data;
+        })
+}
+
+
 

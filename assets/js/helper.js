@@ -3,9 +3,9 @@ import $ from 'jquery'
 const interviewButton = document.querySelector('.interview-menu');
 const indexButton = document.querySelector('.index-menu');
 const colophonButton = document.querySelector('.colophon-menu');
-const interviewDiv = document.querySelector('.interviews')
-const indexDiv = document.querySelector('.index-words')
-const colophonDiv = document.querySelector('.colophon')
+const interviewDiv = document.querySelector('.interviews');
+const indexDiv = document.querySelector('.index-words');
+const colophonDiv = document.querySelector('.colophon');
 
 export function menuRight() {
     interviewButton.onclick = function () {
@@ -25,9 +25,11 @@ export function menuRight() {
         interviewDiv.style.display = "none";
         colophonDiv.style.display = "block";
     };
+
+    // Menu Active
     setTimeout(function () {
-        $("#sidebar a").click(function () {
-            $("#sidebar a").removeClass("active");
+        $(".menu-principal-sub a").click(function () {
+            $(".menu-principal-sub a").removeClass("active");
             $(this).toggleClass("active");
         });
 
@@ -39,22 +41,7 @@ export function menuRight() {
     }, 500);
 
 
-//Menu highlights
-    $(document).ready(function () {
-        $('ul li a').click(function () { //ce ligne vise tout les <a>
-            $('li a').removeClass("active");
-            $(this).addClass("active");
-            // $(this).toggle("active");
-        });
-    });
-
-
-
-};
-
-
-
-
+}
 
 export function smoothScroll() {
     $("a").on('click', function (event) {
@@ -71,6 +58,6 @@ export function smoothScroll() {
     });
 
 
-};
+}
 
 

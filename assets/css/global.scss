@@ -1,199 +1,112 @@
-
-
-.title{
-	width: 100%;
-	border-bottom: 1px solid grey;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	position: fixed;
-	z-index: 12;
-	background: white;
-	font-size: 1.4rem;
-	text-transform: uppercase;
-
-a{
-    margin-left: 5vw;
-
-
-}
-}
-
-.highlight {
-    background-color: cornflowerblue;
-}
-
-em {
-    /*display: block;*/
-	width: 81%;
-	font-size: 1.7rem;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%; /* 1rem = 10px */
+  margin: 0;
+  scroll-padding-top: 200px;
+  scroll-behavior: smooth;
 }
 
 
-html,body {
-	padding-left: 10px;
-	padding-right: 10px;
-	//position: relative;
-	scroll-padding-top: 200px;
-	scroll-behavior: smooth;
+body {
+  box-sizing: border-box;
+  font-family: $firstFont;
+  font-size: 1.7rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-kerning: normal;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -moz-font-feature-settings: "kern=1", "liga=1", "calt=1";
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+
 }
 
-.fade {
-	animation-name: fade;
-	animation-duration: 2s;
+h1 {
+  font-family: $firstFont;
+  font-size: 2.3em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border: 0;
+  font-family: $firstFont;
+  cursor: pointer;
+}
+
+a:focus {
+  outline: 0;
+}
+
+p {
+  margin-top: 0;
 }
 
 blockquote {
-	font-family: 'AtlasGrotesk-Light', sans-serif;
-	font-size: larger;
+  font-family: 'AtlasGrotesk-Light', sans-serif;
+  font-size: larger;
 }
-
-.paper-title {
-	font-family: 'AtlasGrotesk-Light', sans-serif;
-	/* Oblique title */
-	position: fixed;
-	color: white;
-	font-size: 50%;
-	top: 0;
-	width: 30%;
-	left: 1%;
-	z-index: 5;
-	pointer-events: none;
-}
-
-.paper-title span.underline {
-	/* Underline style */
-	padding-bottom: 5px;
-}
-
 
 article {
-	position: absolute;
-	margin-left: 5vw;
-	top: 0;
-	padding-top: 185px;
-	padding-bottom: 5px;
-	width: 50%;
+  position: absolute;
+  margin-left: 5vw;
+  top: 0;
+  padding-top: 185px;
+  padding-bottom: 5px;
+  width: 50%;
 }
 
-.content-article {
-	font-size: 1.7rem;
-	padding-bottom: 100px;
-	margin-right: 140px;
-	//scroll-behavior: smooth;
+em {
+  width: 81%;
+  font-size: 1.7rem;
+}
+
+img {
+  display: block;
+  width: 81%;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul,
+ol,
+li {
+  text-indent: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+sup {
+  font-size: 65%;
+  line-height: 1;
+}
+
+strong {
+  font-family: $secondFont;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  font-weight: normal;
+  padding-right: 5px;
+  padding-left: 5px;
 
 }
 
-.notes-images {
-	position: absolute;
-	right: 35vw;
-	margin-right: -230px;
-	width: 450px;
-	opacity: 0;
-}
-
-
-.footnote-counter {
-	//display: block;
-}
-
-.footnote>a{
-	display: inline-block;
-	padding-right: 20px;
-	border-bottom: 2px solid transparent;
-	white-space: nowrap;
-}
-
-.footnote-content {
-	display: none;
-}
-
-.pourcentage {
-	position: fixed;
-	width: 4.2vw;
-	top: 20px;
-	text-align: right;
-	z-index: 10;
-	pointer-events: none;
-}
-
-.numerotation {
-	position: absolute;
-}
-
-.numero {
-	position: absolute;
-	text-align: right;
-	width: 30px;
-	height: 30px;
-}
-
-#nombre {
-	font-family: 'AtlasGrotesk-Light', sans-serif;
-	position: fixed;
-	left: 0.1vw;
-	bottom: -35px;
+strong:hover {
+  color: red;
 
 }
 
 
-.r-notes-container {
-
-	a{
-
-		text-decoration: underline;
-
-	}
-
-	top: 0;
-	p{
 
 
-		display: inline;
-	}
-}
 
-.content-article >h1{
 
-	/*display: none;*/
-}
 
-.abrir .active {
-	text-decoration: underline;
-}
-
-.open-interview-1{
-
-	cursor: pointer;
-
-}
-
-.open-interview-2{
-
-	cursor: pointer;
-
-}
-
-.open-interview-3{
-
-	cursor: pointer;
-
-}
-
-.open-interview-4{
-
-	cursor: pointer;
-
-}
-
-.open-interview-5{
-
-	cursor: pointer;
-
-}
-
-.open-interview-6{
-
-	cursor: pointer;
-
-}
 

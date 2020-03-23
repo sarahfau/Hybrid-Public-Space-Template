@@ -9,7 +9,7 @@ export const md = require('markdown-it')()
 
 // Take the Markdown File and passes it to HTML
 
-export function getmarkdownFromAnywhere(textMD,DIV) {
+export function getmarkdownFromAnywhere(textMD, DIV) {
 
     fetch(textMD)
         .then(response => response.text())
@@ -17,7 +17,7 @@ export function getmarkdownFromAnywhere(textMD,DIV) {
             document.querySelector(DIV).innerHTML = (md.render(data));
         })
 
-};
+}
 
 
 export function getmarkdown() {
@@ -28,11 +28,11 @@ export function getmarkdown() {
             document.querySelector('#content').innerHTML = (md.render(data));
         })
 
-};
+}
 
 export function createMenu() {
     setTimeout(function () {
-        var list = document.querySelector("#sidebar")
+        var list = document.querySelector(".menu-principal-sub");
         var menuH1s = document.querySelector(".content-article").querySelectorAll("h1");
         // console.log(menuH1s);
         $(".content-article h1").each(function () {
@@ -41,14 +41,14 @@ export function createMenu() {
         });
     }, 500);
 
-};
+}
 
 export function footnotesElements() {
     setTimeout(function () {
-    var elements = document.getElementsByClassName("footnote-ref");
-    for (var i = 0; i < elements.length; ++i) {
-        elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
-    }
+        var elements = document.getElementsByClassName("footnote-ref");
+        for (var i = 0; i < elements.length; ++i) {
+            elements[i].innerHTML = elements[i].innerHTML.replace('[', ' ').replace(']', '');
+        }
     }, 500);
 }
 
@@ -83,7 +83,6 @@ export function putNotes(footerClassName) {
                 copyOfFooterElement.insertBefore(noteNumberValueElement, copyOfFooterElement.firstChild);
 
 
-
                 if (topPosition - marginTopNote <= prevFootnoteBottomPosition) {
                     topPosition = prevFootnoteBottomPosition + marginTopNote;
                 }
@@ -95,7 +94,7 @@ export function putNotes(footerClassName) {
         }
         noteContainer.style.opacity = 1;
     }, 500);
-};
+}
 
 export function ResizeFootnotes() {
     window.addEventListener("resize", function () {
@@ -103,7 +102,7 @@ export function ResizeFootnotes() {
 
 
     });
-};
+}
 
 export function porcentage() {
     //porcetange
@@ -118,7 +117,7 @@ export function porcentage() {
     if ($("html").hasClass("mobile")) {
         var windowWidth = $(window).width();
     }
-};
+}
 
 
 

@@ -1,0 +1,50 @@
+.title {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  z-index: 5;
+  background: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  a {
+    margin-left: 5vw;
+
+  }
+}
+
+.menu-principal {
+  border-bottom: 1px solid grey;
+  position: fixed;
+  background: white;
+  width: 100%;
+  z-index: 2;
+  padding-top: 55px;
+  padding-bottom: 15px;
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+.menu-principal-sub {
+  margin-left: 5vw;
+  z-index: 5;
+  width: 100%;
+
+  a {
+
+    padding-top: 2px;
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+
+  .active {
+    background-color: #f0f0f0;
+    padding-top: 2px;
+  }
+}
+
+

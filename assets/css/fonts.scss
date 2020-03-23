@@ -1,0 +1,46 @@
+// =============================================================================
+// Fonts.scss
+// -----------------------------------------------------------------------------
+// Custom font declarations (if any) can be imported here
+
+// Pre-defined fonts
+// -----------------------------------------------------------------------------
+
+$firstFont: 'AtlasGrotesk-Light';
+$firstFontUrl: "/assets/typefaces/AtlasGrotesk-Light.otf";
+$firstFontSize: 16px;
+
+$secondFont: 'AtlasTypewriter-Light';
+$secondFontUrl: "/assets/typefaces/AtlasTypewriter-Light.otf";
+$secondFontSize: 16px;
+
+// Page typography
+// -----------------------------------------------------------------------------
+
+
+// AtlasGrotesk-Light
+// AtlasTypewriter-Light
+// https://commercialtype.com/catalog/atlas/atlas_grotesk
+
+
+@font-face {
+  font-family: $firstFont;
+  src: url($firstFontUrl) format("opentype");
+  //url() format('truetype'),
+  //url() format('woff');
+  //url() format('woff2'),
+  //url() format('woff');
+  font-weight: normal;
+
+}
+
+@font-face {
+  font-family: $secondFont;
+  src: url($secondFontUrl) format("opentype");
+  //url() format('truetype'),
+  //url() format('woff');
+  //url() format('woff2'),
+  //url() format('woff');
+  font-weight: normal;
+}
+
