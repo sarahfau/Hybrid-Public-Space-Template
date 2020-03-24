@@ -1,6 +1,6 @@
 .menu-right {
   font-family: $secondFont;
-  font-size: 1.2rem;
+  font-size: 0.9vw;
   width: 30%;
   height: 100%;
   background: white;
@@ -15,7 +15,7 @@
   line-height: 20px;
 
   a {
-    font-size: 1.4rem;
+    font-size: 1.1vw;
     font-family: $secondFont;
     line-height: 20px;
   }
@@ -65,7 +65,7 @@
     padding-bottom: 5px;
     padding-right: 5px;
     font-family: $secondFont;
-    font-size: 1.2rem;
+    font-size: 0.9vw;
     line-height: 1.5;
   }
 
@@ -73,14 +73,14 @@
 
 .interviews-list {
   em {
-    font-size: 1.2rem;
+    font-size: 0.9vw;
     line-height: 1.5;
   }
 
   h1 {
     animation-name: fade;
     animation-duration: 1.5s;
-    font-size: 1.2rem;
+    font-size: 0.9vw;
     cursor: pointer;
     user-select: none;
     font-family: $secondFont;
