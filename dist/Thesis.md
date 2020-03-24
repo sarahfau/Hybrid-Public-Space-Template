@@ -42,7 +42,7 @@ This research suggests a shift in focus, from the content to the structure, from
 These statements will be developed further throughout the text, but will also be reinforced by additional voices. I have been talking to Pierre Mohamed-Petit about translating *living material into semantic bits* and *human monitoring*, exclusively in the specific context of photojournalism, to Olia Lialina about the visibility of *resisting alive systems* and the need of preservation of these fossils in a *future-oriented perspective*, exclusively within the specific context of archiving, to Pierke I.S. Bosschieter and Caroline Diepeveen about the combination of *technique and human autocompletion* and the comparison between *physical and digital labelling*, exclusively in the context of book indexing.
 This format illustrates an attempt to bring together various points of view and degrees of expertise for the same purpose: a better knowledge of these tools in use, giving a much more complete picture, so we can reflect on them.
 
-[^2]: Georges Perec, ‘The ineffable joys of enumeration’, from Think/Classify, 1985
+[^2]: Georges Perec, ‘The ineffable joys of enumeration’, from Think/Classify, 1985.
 
 
 # LANDSCAPE OF BOXES: LIVING MATERIAL VS. SEMANTIC BITS
@@ -81,18 +81,18 @@ He continues to argue using the significant example of popular music charts: “
 So, if online tagging has the power to make web-objects visible or invisible based on its good or bad categorisation, it is essential to question who can have such a power, who is in charge of such a task.
 
 [^3]:Lexico Oxford online dictionary. [Online]
-Available at: https://www.lexico.com/en/definition/item
-[^4]:Online etymology dictionary. List [Online]
-Available at: https://www.etymonline.com/word/list
-[^5]:Van Dale dictionary. Lijst [Online]
-Available at: https://www.vandale.nl/gratis-woordenboek/nederlands/betekenis/lijst
+[Available here](https://www.lexico.com/en/definition/item)
+[^4]:Online etymology dictionary. List. [Online]
+[Available here](https://www.etymonline.com/word/list)
+[^5]:Van Dale dictionary. Lijst. [Online]
+[Available here](https://www.vandale.nl/gratis-woordenboek/nederlands/betekenis/lijst)
 [^6]:Wikipedia.(2003) List of lists of lists. [Online]
-Available at: [Wikipedia/List_of_lists](https://en.wikipedia.org/wiki/List_of_lists_of_lists)
-[^7]:Merriam-Webster Dictionary
-Available at: https://www.merriam-webster.com/dictionary/mold
+[Available here](https://en.wikipedia.org/wiki/List_of_lists_of_lists)
+[^7]:Merriam-Webster Dictionary.
+[Available here](https://www.merriam-webster.com/dictionary/mold)
 [^8]:The term web-object will refer to any element in the digital context.
 [^9]:One Kilobyte of Terabyte Age, Olia Lialina.
-Available at: https://blog.geocities.institute/ and  https://oneterabyteofkilobyteage.tumblr.com/
+[Available here](https://blog.geocities.institute/) and [here](https://oneterabyteofkilobyteage.tumblr.com/).
 For now, only these two platforms exist but she is working on a new platform that would become available to the public in the future. She will integrate her current work of classification of each web page.
 [^10]:Cole Young, Liam. List cultures: Knowledge and Poetics from Mesopotamia to BuzzFeed, Amsterdam University Press, 2017.
 
@@ -137,21 +137,21 @@ Ornithology by Anne Geene and Arjan de Nooy. De Hef Publishers. 2016.
 
 If this project takes advantage of the potential of order as a means of creating new associations, the order remains a parameter that we are rarely aware of. For instance, we instinctively use the alphabetical order for the vast majority of documents. As an universal agreement, it is taken for granted, excluding the possibility of being questioned. Whatever approach is chosen: they always incorporate a certain perspective. Ordering things by frequency will automatically put the focus on the most common items, whereas an alphabetical order provides visibility also to more specific items. Therefore, as much as a selection of specific words influences our way of seeing, the way of ordering will influence how we apprehend and interpret the information. According to the sociologist Douglas Harper, the latin etymology of the word index[^15], so listing following a specific order, refers to “one who points out, discloser, discoverer, informer”. The order directs, but it suggests and does not impose. And this is where my fascination for the list structure originates: the order subtly suggests a message. It automatically adds a further layer of meaning by the way words are put together. But if the order directs, it is not the only parameter that influences the reading and experience of a list.
 
-[^11]: Technopedia. What is Folksonomy [Online]
-Available at: [Technipedia](https://www.techopedia.com/definition/30196/folksonomy)
+[^11]: Technopedia. What is Folksonomy. [Online]
+[Available here](https://www.techopedia.com/definition/30196/folksonomy)
 
 
 
-[^12]: Human computation. Youtube [Online]
-Available at: https://www.youtube.com/watch?v=tx082gDwGcM
+[^12]: Human computation. Youtube. [Online]
+[Available here](https://www.youtube.com/watch?v=tx082gDwGcM)
 
-[^13]: HTML: A Representation of textual information and Meta Information for retrieval and interchange, 1993
+[^13]: HTML: A Representation of textual information and Meta Information for retrieval and interchange, 1993.
 
 [^14]: Mondriaan Fonds. Interview: Noor Mertens and Anne Geene. Extract from Prospects & Concepts 2016. 
-Available at: https://www.mondriaanfonds.nl/pcprofiel/anne-geene/
+[Available here](https://www.mondriaanfonds.nl/pcprofiel/anne-geene/)
 
 [^15]: Harper, Douglas. 2017. “Index”. In Online Etymological Dictionary. 
-Available at: From: https://www.etymonline.com/word/index
+[Available here](https://www.etymonline.com/word/index)
 
 # PRESENTING: PHYSICAL VS. DIGITAL MOLDS
 
@@ -173,10 +173,10 @@ Experiments with Google: Tags. 2017.
 
 I believe that the potential of the list rests in keeping its edges visible. To keep its main function of revealing how we organize and describe the world around us, the digital list must still be able to be presented as a whole. I find it regrettable that the result of the tagging process is almost never shown. If the tagging system is an indexing process, it is for now never presented as an index. It would reveal much more if they were re-organized and made visible, by treating them as lists. The tag is a representative carrier of the evolution of our relation to classification which itself reveals how we describe the world around us, and therefore how culture is constructed. It is in this direction that my project will be developed, by reinterpreting, reclassifying and re-presenting, these potential unedited lists that are the tags. By reversing this engineering, bringing the tags from the background to the visible surface of the web, it would show how this simple daily tool of listing suddenly appears as a descriptor of our daily world, without us being aware of it and its consequences.
 
-[^16]: Apple Inc, Official Apple (New) iPad Trailer, 2012
-[^17]:  Don Norman, “Why Interfaces Don’t Work”, in: Brenda Laurel (Ed.), The Art of Human-Computer Interface Design, 1990
+[^16]: Apple Inc, Official Apple (New) iPad Trailer, 2012. [Online] [Available here](https://www.youtube.com/watch?v=FbijQPKAAjQ)
+[^17]:  Don Norman, “Why Interfaces Don’t Work”, in: Brenda Laurel (Ed.), The Art of Human-Computer Interface Design, 1990.
 [^18]:  Experiments with Google: Tags. Could computers help identify artworks? [Online]
-Available at: https://experiments.withgoogle.com/tags
+[Available here](https://experiments.withgoogle.com/tags)
 
 # CONCLUSION
 

@@ -40,7 +40,7 @@
 
 @for $i from 1 through 100 {
   .open-interview-#{$i} {
-    cursor: pointer;;
+    cursor: alias;;
   }
 }
 

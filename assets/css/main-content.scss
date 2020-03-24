@@ -59,6 +59,12 @@
     text-decoration: underline;
   }
 
+  a:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: alias;
+  }
+
   p {
     display: inline;
   }
