@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/sarahfau/Hybrid-Public-Space-Template/issues"
   },
-  "homepage": "https://github.com/sarahfau/Hybrid-Public-Space-Template#readme",
+  "homepage": "http://sarahfau.github.io/Hybrid-Public-Space-Template",
   "dependencies": {
     "css": "^2.2.4",
     "fs": "0.0.1-security",
