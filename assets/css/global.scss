@@ -4,7 +4,7 @@ body {
   height: 100%;
   font-size: 62.5%; /* 1rem = 10px */
   margin: 0;
-  scroll-padding-top: 200px;
+  scroll-padding-top: 180px;
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
@@ -87,7 +87,7 @@ sup {
 
 strong {
   font-family: $secondFont;
-  font-size: 1.2rem;
+  font-size: 0.95vw;
   text-decoration: underline;
   font-weight: normal;
   padding-right: 5px;

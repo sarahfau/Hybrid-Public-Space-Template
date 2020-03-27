@@ -1,132 +1,73 @@
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 1024px) {
 
-  em {
-
-    display: block;
-    width: 100%;
-  }
+  //global
 
   img {
-    width: 100%;
+    width: 60%;
     height: auto;
   }
 
-  body {
+  article {
+    padding-left: 40px;
+    padding-top: 155px;
+    margin-top: 0;
+    margin-left: 0;
+    width: 70%;
+    position:relative;
 
-    overflow-x: hidden;
-    overflow-y: visible;
   }
 
-  article {
+  //font-sizes
 
-    margin-left: 0;
-    padding-right: 2.5vw;
-    display: contents;
-    width: 100%;
+  .title a, .compteur, .menu-principal-sub, a.interview-menu, a.colophon-menu, a.index-menu {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  #content-colophon, strong, #keywords a, .menu-right h1, .menu-right p, .menu-right em  {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .content-article, em {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+
+.footnote {
+  font-size: 8.5px;
+}
+
+
+  //margin-padding
+
+  .title a {
+    margin-left: 40px;
+  }
+
+  .menu-principal, .menu-right {
+    padding-top: 45px;
+    padding-bottom: 10px;
   }
 
   .menu-principal-sub {
-    margin-left: 15px
-
+    margin-left: 40px;
   }
 
-  .title a {
-    margin-left: 15px
-
+  .menu-right{
+    padding-left: 15px;
   }
-
 
   .content-article {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-bottom: 1vw;
+    padding-right: 3vw;
   }
-  .pourcentage {
-    font-size: 0.9rem;
-  }
-
-
-  .numero {
-    left: 27px;
-    font-family: "AtlasGrotesk-Light", sans-serif;
-    font-weight: 400;
-  }
-
-  .pourcentage {
-    left: -48px !important;
-  }
-
-  .footnote-content .footnote-counter {
-    display: inline;
-    display: none;
-  }
-
-
-}
-
-@media screen and (max-width: 768px) {
 
   .notes-images {
     position: relative;
     display: contents;
     margin-left: 0;
 
-  }
-
-  .footnote {
-    float: right;
-    width: 100%;
-    margin: 0px;
-    clear: both;
-    padding-bottom: 10px;
-  }
-
-}
-
-@media screen and (max-width: 1024px) {
-
-  body {
-
-    font-size: 1.6rem;
-    line-height: 1.2;
-    scroll-padding-top: 400px;
-  }
-
-
-  article {
-    padding-left: 5vw;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0;
-    width: 100%;
-  }
-
-
-  .content-article {
-    margin-left: 0vw;
-    padding-bottom: 10px;
-    padding-top: 180px;
-  }
-
-  .pourcentage {
-    left: 7px !important;
-    width: 4.2vh;
-  }
-
-  .notes-images {
-    position: absolute;
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
-    opacity: 0;
-  }
-
-
-  .r-notes-container {
-    position: static;
   }
 
   .r-notes-container > .footnote {
@@ -135,14 +76,57 @@
     margin-left: 5vw;
   }
 
-  .footnote {
-    float: right;
+  .footnote{
     width: 100%;
-    margin: 0px;
-    clear: both;
+    border-style: dotted;
+    padding-left: 10px;
+    margin-right: 20px;
     padding-bottom: 10px;
+    display: block;
+    white-space: normal;
   }
-
-
 }
 
+
+@media screen and (min-width: 1200px) {
+
+  //global
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  //font-sizes
+
+  .title a, .menu-principal-sub, .compteur, a.interview-menu, a.colophon-menu, a.index-menu {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+
+  }
+
+  #content-colophon, strong, #keywords a, .menu-right h1, .menu-right p, .menu-right em  {
+    font-size: 1.15rem;
+    line-height: 1.6rem;
+  }
+
+  .content-article, em {
+    font-size: 1.55rem;
+    line-height: 2rem;
+  }
+
+  .footnote {
+    font-size: 1.1rem;
+  }
+
+//margin
+
+  .interviews-list{
+  padding-right: 30px;
+  }
+
+  .menu-principal-sub {
+    margin-left: 60px;
+
+  }
+}
