@@ -56,7 +56,7 @@ export function putNotes(footerClassName) {
 
     setTimeout(function () {
         const footerNotesElements = document.querySelectorAll(footerClassName);
-        const noteContainer = document.querySelector(".r-notes-container");
+        const noteContainer = document.querySelector(".notes-images");
         let prevFootnoteBottomPosition = 0;
         noteContainer.style.opacity = 0;
         noteContainer.style.transition = "opacity 1000ms ease-in-out";
