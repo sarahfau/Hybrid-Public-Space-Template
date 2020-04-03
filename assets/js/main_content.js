@@ -1,6 +1,4 @@
 import $ from 'jquery'
-
-
 export const md = require('markdown-it')()
     .use(require('markdown-it-container'))
     .use(require('markdown-it-footnote'))
@@ -19,7 +17,6 @@ export function getmarkdownFromAnywhere(textMD, DIV) {
 
 }
 
-
 export function getmarkdown() {
 
     fetch('Thesis.md')
@@ -31,13 +28,24 @@ export function getmarkdown() {
 }
 
 export function createMenu() {
+
+    var ID = function () {
+
+        return '_' + Math.random().toString(36).substr(2, 9);
+
+
+    };
+
     setTimeout(function () {
         var list = document.querySelector(".menu-principal-sub");
         var menuH1s = document.querySelector(".content-article").querySelectorAll("h1");
         // console.log(menuH1s);
         $(".content-article h1").each(function () {
-            $(this).prepend('<a name="' + $(this).text() + '"></a>');
-            $(list).append('<li><a href="#' + $(this).text() + '">' + $(this).text() + '</a></li>');
+            // IMPORTANT for this to work there should be no accent letters in the first letter of you titles H1 (eg:( éáô etc...
+            $(this).prepend('<a id="' + $(this).text().split(' ')[0].replace(/[^A-Za-z0-9\s]/g, "").replace(/\s{2,}/g, " ") + '"></a>');
+            $(list).append('<li><a href="#' + $(this).text().split(' ')[0].replace(/[^A-Za-z0-9\s]/g, "").replace(/\s{2,}/g, " ") + '">' + $(this).text() + '</a></li>');
+
+
         });
     }, 500);
 
@@ -56,7 +64,7 @@ export function putNotes(footerClassName) {
 
     setTimeout(function () {
         const footerNotesElements = document.querySelectorAll(footerClassName);
-        const noteContainer = document.querySelector(".r-notes-container");
+        const noteContainer = document.querySelector(".notes-images");
         let prevFootnoteBottomPosition = 0;
         noteContainer.style.opacity = 0;
         noteContainer.style.transition = "opacity 1000ms ease-in-out";
