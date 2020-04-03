@@ -32,6 +32,8 @@
   .content-article, em {
     font-size: 1.3rem;
     line-height: 1.7rem;
+    margin-right: 2vw;
+
   }
 
 .footnote {
@@ -64,13 +66,16 @@
   }
 
   .notes-images {
-    position: relative;
-    display: contents;
-    margin-left: 0;
+    position: inherit;
+    right: 0;
+    margin-right:0;
+    width: 100%;
+    opacity: 0;
+    padding-left: 20px;
 
   }
 
-  .r-notes-container > .footnote {
+  .notes-images > .footnote {
     top: 0 !important;
     position: relative !important;
     margin-left: 5vw;
@@ -80,7 +85,6 @@
     width: 100%;
     border-style: dotted;
     padding-left: 10px;
-    margin-right: 20px;
     padding-bottom: 10px;
     display: block;
     white-space: normal;

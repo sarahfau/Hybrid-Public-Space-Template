@@ -4,6 +4,7 @@ body {
   height: 100%;
   font-size: 62.5%; /* 1rem = 10px */
   margin: 0;
+  box-sizing: border-box;
   scroll-padding-top: 180px;
   scroll-behavior: smooth;
   overscroll-behavior: none;

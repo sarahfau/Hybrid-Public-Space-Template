@@ -28,10 +28,24 @@
 
 .notes-images {
   position: absolute;
-  right: 35vw;
-  margin-right: -230px;
+  right: -30vw;
   width: 450px;
   opacity: 0;
+  top: 0;
+
+  a {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: alias;
+  }
+
+  p {
+    display: inline;
+  }
 }
 
 
@@ -49,24 +63,5 @@
   text-align: right;
   z-index: 10;
   pointer-events: none;
-}
-
-
-.r-notes-container {
-  top: 0;
-
-  a {
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: red;
-    text-decoration: underline;
-    cursor: alias;
-  }
-
-  p {
-    display: inline;
-  }
 }
 
