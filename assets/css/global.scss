@@ -24,7 +24,10 @@ body {
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale;
+  em {
+    font-family: $thirdFont;
 
+  }
 }
 
 

@@ -67,11 +67,18 @@
 
 #intro-text{
   background-color: #4ce161;
-  height: 400px;
+  height: 70%;
   z-index: 9999;
   position: absolute;
   font-size: 3rem;
-  padding: 2vw 5vw 0 5vw;
+  padding: 1vw 5vw 0 5vw;
+
+  h1{
+    font-family: AtlasGrotesk-Light, sans-serif;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
 
   span{
     font-family: "AtlasTypewriter-Light", monospace;

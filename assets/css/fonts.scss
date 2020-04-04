@@ -14,11 +14,16 @@ $secondFont: 'AtlasTypewriter-Light';
 $secondFontUrl: "/assets/typefaces/AtlasTypewriter-Light.otf";
 $secondFontSize: 16px;
 
+$thirdFont: 'AtlasGrotesk-LightItalic';
+$thirdFontUrl: "/assets/typefaces/AtlasGrotesk-LightItalic.otf";
+$thirdFontSize: 16px;
+
 // Page typography
 // -----------------------------------------------------------------------------
 
 
 // AtlasGrotesk-Light
+// AtlasGrotesk-Italic
 // AtlasTypewriter-Light
 // https://commercialtype.com/catalog/atlas/atlas_grotesk
 
@@ -44,3 +49,12 @@ $secondFontSize: 16px;
   font-weight: normal;
 }
 
+@font-face {
+  font-family: $thirdFont;
+  src: url($thirdFontUrl) format("opentype");
+  //url() format('truetype'),
+  //url() format('woff');
+  //url() format('woff2'),
+  //url() format('woff');
+  font-weight: normal;
+}

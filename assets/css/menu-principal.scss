@@ -50,10 +50,10 @@ p.pourcent{
   a {
 
     padding-top: 2px;
-    -moz-transition: all 1s ease-out;
-    -webkit-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
   }
 
   .active {
