@@ -81,3 +81,13 @@ setTimeout(function () {
     });
 }, 2000);
 
+
+//scroll fix content (https://css-tricks.com/scroll-fix-content/)
+/*$(window).scroll(function(){
+    if ($(window).scrollTop() >= 400) {
+        $('.full-text').addClass('full-text-fixed');
+    }
+    else {
+        $('.full-text').removeClass('full-text-fixed');
+    }
+});*/
