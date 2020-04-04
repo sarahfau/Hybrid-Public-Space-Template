@@ -7,11 +7,15 @@ const colophonButton = document.querySelector('.colophon-menu');
 const interviewDiv = document.querySelector('.interviews');
 const indexDiv = document.querySelector('.index-words');
 const colophonDiv = document.querySelector('.colophon');
+const az = document.querySelector('.sort');
+const freq = document.querySelector('.freq');
 
 export function menuRight() {
     interviewButton.onclick = function () {
         indexDiv.style.display = "none";
         colophonDiv.style.display = "none";
+        az.style.display = "none";
+        freq.style.display = "none";
         interviewDiv.style.display = "block";
     };
 
@@ -19,11 +23,17 @@ export function menuRight() {
         interviewDiv.style.display = "none";
         colophonDiv.style.display = "none";
         indexDiv.style.display = "block";
+        indexDiv.style.height = "100%";
+        freq.style.display = "inline";
+        az.style.display = "inline";
+
     };
 
     colophonButton.onclick = function () {
         indexDiv.style.display = "none";
         interviewDiv.style.display = "none";
+        az.style.display = "none";
+        freq.style.display = "none";
         colophonDiv.style.display = "block";
     };
 
