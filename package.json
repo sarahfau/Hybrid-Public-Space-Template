@@ -25,6 +25,7 @@
     "fs": "0.0.1-security",
     "fs-readdir": "0.0.3",
     "glob": "^7.1.6",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.4.1",
     "jquery-smooth-scroll": "^2.2.0",
     "m": "^1.5.6",

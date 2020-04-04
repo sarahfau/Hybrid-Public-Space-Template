@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import {findWord} from './index-words'
+import {findWord, sortList} from './index-words'
 import {menuInterviews, getInterviewsToMarkdown} from './interviews'
 import {espaceFine} from './espacefine.min'
 import {menuRight, smoothScroll} from './helper'
@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     smoothScroll();
     getmarkdownFromAnywhere('colophon.md', '#content-colophon');
     getMarkdownToData("colophon.md");
+    // sortList()
 });
 
 export function getMarkdownToData(textMD) {
