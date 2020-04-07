@@ -44,6 +44,12 @@ export function menuRight() {
             $(this).toggleClass("active");
         });
 
+        $(".menu-right-sub li a").click(function () {
+
+            $(".menu-right-sub li a").removeClass("active");
+            $(this).toggleClass("active");
+        });
+
     }, 500);
 
 
