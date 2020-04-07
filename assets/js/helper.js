@@ -44,11 +44,6 @@ export function menuRight() {
             $(this).toggleClass("active");
         });
 
-        $(".menu-right-sub li a").click(function () {
-
-            $(".menu-right-sub li a").removeClass("active");
-            $(this).toggleClass("active");
-        });
     }, 500);
 
 
@@ -74,7 +69,7 @@ export function smoothScroll() {
 
 setTimeout(function () {
     $(window).scroll(function () {
-        var position = $(this).scrollTop();
+        var position = $(this).scrollTop() + 300;
         var menu = document.querySelector(".menu-principal-sub");
 
         var sections = menu.getElementsByTagName("a");
@@ -89,7 +84,7 @@ setTimeout(function () {
             }
         });
     });
-}, 2000);
+},);
 
 
 //scroll fix content (https://css-tricks.com/scroll-fix-content/)
