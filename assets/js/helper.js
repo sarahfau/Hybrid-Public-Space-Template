@@ -63,8 +63,6 @@ export function smoothScroll() {
             });
         }
     });
-
-
 }
 
 setTimeout(function () {
@@ -92,7 +90,6 @@ window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("intro-text").style.display = "block";
-
 
     } else {
         document.getElementById("intro-text").style.display = "none";

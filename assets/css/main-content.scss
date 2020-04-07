@@ -3,10 +3,6 @@
   visibility: hidden;
 }
 
-#intro-text {
-
-  transition: all 0.5s;
-}
 
 .footnote-backref {
   display: none;
@@ -74,11 +70,11 @@
   background-color: #4ce161;
   height: 70%;
   z-index: 9999;
-  position: absolute;
+  position: fixed;
   font-size: 3rem;
   padding: 1vw 5vw 0 5vw;
 
-  h1{
+  h1 {
     font-family: AtlasGrotesk-Light, sans-serif;
     font-size: 1.1vw;
     text-transform: uppercase;
