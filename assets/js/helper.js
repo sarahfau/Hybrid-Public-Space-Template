@@ -91,11 +91,11 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("intro-text").style.opacity = "1";
+        document.getElementById("intro-text").style.display = "block";
 
 
     } else {
-        document.getElementById("intro-text").style.opacity = "0";
+        document.getElementById("intro-text").style.display = "none";
 
     }
     prevScrollpos = currentScrollPos;
