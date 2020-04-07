@@ -87,6 +87,21 @@ setTimeout(function () {
 },);
 
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("intro-text").style.opacity = "1";
+        document.querySelector(".tohide").style.opacity = "0";
+
+    } else {
+        document.getElementById("intro-text").style.opacity = "0";
+        document.querySelector(".tohide").style.opacity = "1";
+    }
+    prevScrollpos = currentScrollPos;
+};
+
+
 //scroll fix content (https://css-tricks.com/scroll-fix-content/)
 /*$(window).scroll(function(){
     if ($(window).scrollTop() >= 400) {
