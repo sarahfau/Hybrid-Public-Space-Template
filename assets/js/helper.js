@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-
 const interviewButton = document.querySelector('.interview-menu');
 const indexButton = document.querySelector('.index-menu');
 const colophonButton = document.querySelector('.colophon-menu');
@@ -91,18 +90,23 @@ setTimeout(function () {
 },);
 
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("intro-text").style.display = "block";
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//     var currentScrollPos = window.pageYOffset;
+//     if (prevScrollpos > currentScrollPos) {
+//
+//     } else {
+//         document.getElementById("intro-text").classList.add("hide")
+//     }
+// };
 
-    } else {
-        document.getElementById("intro-text").style.display = "none";
 
-    }
-    prevScrollpos = currentScrollPos;
-};
+$(function () {
+
+    setTimeout(function () {
+        $("#intro-text").fadeOut(3000);
+    }, 10000)
+});
 
 
 //scroll fix content (https://css-tricks.com/scroll-fix-content/)
