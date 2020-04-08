@@ -1,5 +1,6 @@
 import Mark from 'mark.js'
 import $ from 'jquery'
+
 const buttonElement = document.querySelector('.sort');
 
 buttonElement.addEventListener('click', function (event) {
@@ -28,13 +29,12 @@ export function sortList() {
     }
 }
 
-//TODO counter https://www.the-art-of-web.com/javascript/search-highlight-demo/
 //TODO jump from word to word https://jsfiddle.net/julmot/973gdh8g/
 export function findWord() {
 
+
     const keywords = document.querySelector('#keywords');
     keywords.addEventListener('click', function (event) {
-        $(target).siblings().find('span').remove();
         let instance = new Mark(document.querySelector("#content"));
         let target = event.target;
         let keywordtoSearch = target.textContent;
@@ -51,7 +51,14 @@ export function findWord() {
                 }
 
             });
+
             instance.mark(keywordtoSearch, {
+                'separateWordSearch': false,
+                'diacritics': false,
+                'accuracy': {
+                    'value': 'exactly',
+                    'limiters': ['-', '#', ',', '.']
+                },
                 done: function (counter) {
                     let eachCounter = "(" + counter + ")";
                     $(target).find('span').remove();
@@ -60,7 +67,6 @@ export function findWord() {
                     para.appendChild(nodi);
                     target.appendChild(para);
 
-
                 },
                 filter: function (textNode, foundTerm) {
 
@@ -68,8 +74,54 @@ export function findWord() {
                 },
             });
 
+
             $(target).toggleClass('active').siblings().removeClass('active');
         }
+
+    }, false);
+
+    document.querySelector(".freq").addEventListener('click', function (event) {
+
+
+        const keywordsAll = document.querySelectorAll('#keywords a');
+        const spansafter = document.querySelectorAll('#keywords a span');
+        let instance2 = new Mark(document.querySelector("#content"));
+        for (let i = 0; i < keywordsAll.length; i++) {
+            instance2.mark(keywordsAll[i].textContent, {
+                'separateWordSearch': false,
+                'diacritics': false,
+                'accuracy': {
+                    'value': 'exactly',
+                    'limiters': ['-', '#', ',', '.']
+                },
+                done: function (counter) {
+                    let eachCounter = counter;
+                    console.log(counter);
+                    var para = document.createElement("span");
+                    var nodi = document.createTextNode(eachCounter);
+                    para.appendChild(nodi);
+                    keywordsAll[i].appendChild(para);
+
+                    // keywordsAll[i].appendChild("("+ para +")");
+                    instance2.unmark();
+
+                    var sortedList = $('#keywords a').toArray().sort(function (lhs, rhs) {
+                        return parseInt($(rhs).children("span").text(), 10) - parseInt($(lhs).children("span").text(), 10);
+                    });
+                    $("#keywords").html(sortedList);
+
+                    setTimeout(function () {
+                        $("#keywords").find("span").remove();
+                    }, 100)
+
+                },
+
+
+            });
+
+
+        }
+
 
     }, false);
 

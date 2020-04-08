@@ -7,7 +7,7 @@ import {ResizeFootnotes, porcentage, putNotes, footnotesElements, createMenu, ge
 import {getmarkdownFromAnywhere} from './main_content'
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    findWord();
+
     getmarkdown();
     putNotes(".footnote-item");
     createMenu();
@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     getmarkdownFromAnywhere('colophon.md', '#content-colophon');
     getMarkdownToData("colophon.md");
     // sortList()
+    findWord();
 });
 
 export function getMarkdownToData(textMD) {
